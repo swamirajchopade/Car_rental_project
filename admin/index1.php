@@ -21,7 +21,8 @@ include "leftmeun.php";
 	
     <table cellpadding="10px" border="1">
         <thead>
-        <th>Id</th>
+        <!-- Sr no has Change Name-->
+        <th>Sr No.</th>
         <th>Name</th>
         <th>Class</th>
         <th>Email</th>
