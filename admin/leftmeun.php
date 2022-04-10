@@ -34,7 +34,7 @@
                             </li>
 
                             <li class="nav-item">
-                            <a href="#" class="nav-link">
+                            <a href="car_insert.php" class="nav-link">
                                 <i class="nav-icon fa fa-car"></i>
                                 <p>
                                     Car Insert
