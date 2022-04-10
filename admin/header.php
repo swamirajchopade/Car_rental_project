@@ -52,6 +52,27 @@
             </div>
         </div>
     </form>
+
+    <!-- Right meun has added -->
+    <ul class="navbar-nav ml-auto">
+    <li class="nav-item dropdown">
+        <a class="nav-link" data-toggle="dropdown" href="#">
+        <i class="fa fa-user"></i>
+        </a>
+        <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
+          <span class="dropdown-item dropdown-header">Admin Profile</span>
+          <div class="dropdown-divider"></div>
+          <a href="#" class="dropdown-item">
+          <i class="fa fa-pen mr-2"></i> Edit
+          </a>
+          <div class="dropdown-divider"></div>
+          <a href="#" class="dropdown-item">
+          <i class="fa fa-long-arrow-alt-right mr-2"></i> Logout
+          </a>
+          </div>
+      </li>
+    </ul>
+
 </nav>
 <!-- /.navbar -->
 </div>
