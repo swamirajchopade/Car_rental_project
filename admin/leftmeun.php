@@ -23,7 +23,8 @@
                         <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
                         <li class="nav-item">
-                            <a href="#" class="nav-link">
+                            <!-- Change has done just given path -->
+                            <a href="index1.php" class="nav-link">
                                 <i class="nav-icon fa fa-home"></i>
                                 <p>
                                     Home
@@ -103,13 +104,13 @@
                                     
                                 <ul class="nav nav-treeview">
                                     <li class="nav-item">
-                                        <a href="pages/examples/login.html" class="nav-link">
+                                        <a href="#" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Header</p>
                                         </a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="pages/examples/register.html" class="nav-link">
+                                        <a href="#" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                             <p>Footer</p>
                                             </a>
