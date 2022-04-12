@@ -40,7 +40,7 @@
                                 <a href="#" class="nav-link">
                                     <i class="nav-icon fa fa-car"></i>
                                     <p>
-                                        Car info/insert
+                                        Car Info/Insert
                                         <i class="fas fa-angle-left right"></i>
                                         <span class="badge badge-info right"></span>
                                     </p>
