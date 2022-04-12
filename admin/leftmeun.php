@@ -48,13 +48,15 @@
                                 <ul class="nav nav-treeview">
                                     <li class="nav-item">
                                         <a href="car_info.php" class="nav-link">
-                                            <i class="far fa-circle nav-icon"></i>
+                                            <!-- <i class="far fa-circle nav-icon"></i> -->
+                                            <ion-icon name="list-circle-outline"></ion-icon>
                                             <p>Cars Information</p>
                                         </a>
                                     </li>
                                     <li class="nav-item">
                                         <a href="car_insert.php" class="nav-link">
-                                            <i class="far fa-circle nav-icon"></i>
+                                            <!-- <i class="far fa-circle nav-icon"></i> -->
+                                            <ion-icon name="arrow-redo-circle-outline"></ion-icon>
                                             <p>Car Insert</p>
                                         </a>
                                     </li>
@@ -96,13 +98,15 @@
                                 <ul class="nav nav-treeview">
                                     <li class="nav-item">
                                         <a href="driver_info.php" class="nav-link">
-                                            <i class="far fa-circle nav-icon"></i>
+                                            <!-- <i class="far fa-circle nav-icon"></i> -->
+                                            <ion-icon name="list-circle-outline"></ion-icon>
                                             <p>Driver Information</p>
                                         </a>
                                     </li>
                                     <li class="nav-item">
                                         <a href="driver_insert.php" class="nav-link">
-                                            <i class="far fa-circle nav-icon"></i>
+                                            <!-- <i class="far fa-circle nav-icon"></i> -->
+                                            <ion-icon name="arrow-redo-circle-outline"></ion-icon>
                                             <p>Driver Insert</p>
                                         </a>
                                     </li>
@@ -110,9 +114,10 @@
 
                         <li class="nav-item">
                             <a href="#" class="nav-link">
-                                <i class="nav-icon fa fa-archive"></i>
+                            <ion-icon name="wallet-outline" size="small"></ion-icon>
+                                <!-- <i class="nav-icon fa fa-archive"></i> -->
                                 <p>
-                                    Payment Details
+                                  &nbsp;&nbsp;  Payment Details
                                     <span class="right badge badge-danger"></span>
                                 </p>
                             </a>
