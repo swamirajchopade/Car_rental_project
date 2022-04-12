@@ -1,0 +1,49 @@
+ 
+ ###...THIS IS REF WORK.
+ 
+       <!-- triyl space -->
+                      
+                      
+  <div class="container">
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">
+                                    <i class="nav-icon fa fa-car"></i>
+                                    <p>
+                                        Car info/insert
+                                        <i class="fas fa-angle-left right"></i>
+                                        <span class="badge badge-info right"></span>
+                                    </p>
+                                </a>
+                                <ul class="nav nav-treeview">
+                                    <li class="nav-item">
+                                        <a href="car_info.php" class="nav-link">
+                                            <i class="far fa-circle nav-icon"></i>
+                                            <p>Cars Information</p>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="car_insert.php" class="nav-link">
+                                            <i class="far fa-circle nav-icon"></i>
+                                            <p>Car Insert</p>
+                                        </a>
+                                    </li>
+                        </div>
+
+
+
+
+                         <li class="nav-item">
+                            <a href="car_info.php" class="nav-link">
+                                <i class="nav-icon fa fa-car"></i>
+                                <p>
+                                    car Info
+                                    <span class="right badge badge-danger"></span>
+                                </p>
+                            </a>
+                        </li>
+
+
+
+
+
+                          <!-- triyl space -->
