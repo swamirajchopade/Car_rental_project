@@ -71,7 +71,7 @@
                                 </p>
                             </a>
                         </li>
-                  
+
 
                         <li class="nav-item">
                             <a href="#" class="nav-link">
@@ -83,15 +83,30 @@
                             </a>
                         </li>
 
-                        <li class="nav-item">
-                            <a href="#" class="nav-link">
-                                <i class="nav-icon fa fa-street-view"></i>
-                                <p>
-                                    Driver Insert
-                                    <span class="right badge badge-danger"></span>
-                                </p>
-                            </a>
-                        </li>
+                        <div class="container">
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">
+                                    <i class="nav-icon fa fa-street-view"></i>
+                                    <p>
+                                        Driver info/insert
+                                        <i class="fas fa-angle-left right"></i>
+                                        <span class="badge badge-info right"></span>
+                                    </p>
+                                </a>
+                                <ul class="nav nav-treeview">
+                                    <li class="nav-item">
+                                        <a href="driver_info.php" class="nav-link">
+                                            <i class="far fa-circle nav-icon"></i>
+                                            <p>Driver Information</p>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="driver_insert.php" class="nav-link">
+                                            <i class="far fa-circle nav-icon"></i>
+                                            <p>Driver Insert</p>
+                                        </a>
+                                    </li>
+                        </div>
 
                         <li class="nav-item">
                             <a href="#" class="nav-link">
