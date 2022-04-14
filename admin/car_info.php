@@ -22,10 +22,10 @@
               <h1 class="m-0 text-dark">Car Information</h1>
             </div><!-- /.col -->
             <div class="col-sm-6">
-              <ol class="breadcrumb float-sm-right">
+              <!-- <ol class="breadcrumb float-sm-right">
                 <li class="breadcrumb-item"><a href="index1.php">Car Insert Info</a>/Home</li>
 
-              </ol>
+              </ol> -->
             </div><!-- /.col -->
           </div><!-- /.row -->
           <div class="container text-right ">
@@ -62,7 +62,7 @@
             <td>5</td>
             <!-- <td>#</td> -->
             <td><a href="edit-vehicle.php?id=1"><i class="fa fa-edit"></i></a>&nbsp;&nbsp;
-              <a href="manage-vehicles.php?del=1" onclick="return confirm('Do you want to delete');"><i class="fa fa-close"></i></a>
+              <a href="manage-vehicles.php?del=1" onclick="return confirm('Do you want to delete');"><i class="fa fa-close"></i><i class='bi bi-trash'></i></a>
             </td>
           </tr>
           <tr>
@@ -75,7 +75,7 @@
             <td>4</td>
             <!-- <td>#</td> -->
             <td><a href="edit-vehicle.php?id=1"><i class="fa fa-edit"></i></a>&nbsp;&nbsp;
-              <a href="manage-vehicles.php?del=1" onclick="return confirm('Do you want to delete');"><i class="fa fa-close"></i></a>
+              <a href="manage-vehicles.php?del=1" onclick="return confirm('Do you want to delete');"><i class="fa fa-close"></i><i class='bi bi-trash'></i></a>
             </td>
           </tr>
           <tr>
@@ -88,7 +88,7 @@
             <td>4</td>
             <!-- <td>#</td> -->
             <td><a href="edit-vehicle.php?id=1"><i class="fa fa-edit"></i></a>&nbsp;&nbsp;
-              <a href="manage-vehicles.php?del=1" onclick="return confirm('Do you want to delete');"><i class="fa fa-close"></i></a>
+              <a href="manage-vehicles.php?del=1" onclick="return confirm('Do you want to delete');"><i class="fa fa-close"></i><i class='bi bi-trash'></i></a>
             </td>
           </tr>
         </tbody>
