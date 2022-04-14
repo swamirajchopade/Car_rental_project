@@ -29,8 +29,10 @@
             </div><!-- /.col -->
           </div><!-- /.row -->
 
-          <a href="driver_insert.php" class="text-center"> <button type="button" class="btn btn-block bg-gradient-success btn-lg">Insert New Driver</button></a>
-
+        
+          <div class="container text-right ">
+            <a href="driver_insert.php" class="text-center"> <button type="button" class="btn btn-dark">Insert New Driver</button></a>
+          </div>
 
           <!-- btn btn-block bg-gradient-secondary btn-lg -->
         </div><!-- /.container-fluid -->

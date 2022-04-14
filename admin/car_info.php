@@ -28,9 +28,9 @@
               </ol>
             </div><!-- /.col -->
           </div><!-- /.row -->
-
-          <a href="car_insert.php" class="text-center"> <button type="button" class="btn btn-block bg-gradient-secondary btn-lg">Insert Car</button></a>
-
+          <div class="container text-right ">
+            <a href="car_insert.php" class="text-center"> <button type="button" class="btn btn-dark">Insert Car</button></a>
+          </div>
 
           <!-- btn btn-block bg-gradient-secondary btn-lg -->
         </div><!-- /.container-fluid -->
