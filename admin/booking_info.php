@@ -29,7 +29,7 @@
             </div><!-- /.col -->
           </div><!-- /.row -->
 
-        
+
           <!-- btn btn-block bg-gradient-secondary btn-lg -->
         </div><!-- /.container-fluid -->
       </div>
@@ -57,7 +57,7 @@
             <td>30/02/2023</td>
             <td>04/03/2022</td>
             <td>Tirupati Balaji</td>
-            <td>NOT Conformed</td>
+            <td> <span class="badge badge-warning">pnding</span></td>
             <!-- <td>#</td> -->
             <td><a href="edit-vehicle.php?id=1"><i class="fa fa-edit"></i></a>&nbsp;&nbsp;
               <a href="manage-vehicles.php?del=1" onclick="return confirm('Do you want to delete');"><i class="fa fa-close"></i><i class='bi bi-trash'></i></a>
@@ -70,7 +70,7 @@
             <td>01/04/2021</td>
             <td>01/04/2021</td>
             <td>Delhi</td>
-            <td>Confermed</td>
+            <td><span class="badge badge-success">Conformed</span></td>
             <!-- <td>#</td> -->
             <td><a href="edit-vehicle.php?id=1"><i class="fa fa-edit"></i></a>&nbsp;&nbsp;
               <a href="manage-vehicles.php?del=1" onclick="return confirm('Do you want to delete');"><i class="fa fa-close"></i><i class='bi bi-trash'></i></a>
@@ -83,7 +83,7 @@
             <td>02/05/2022</td>
             <td>03/05/2022</td>
             <td>Mumbai</td>
-            <td>Confermed</td>
+            <td><span class="badge badge-success">Conformed</span></td>
             <!-- <td>#</td> -->
             <td><a href="edit-vehicle.php?id=1"><i class="fa fa-edit"></i></a>&nbsp;&nbsp;
               <a href="manage-vehicles.php?del=1" onclick="return confirm('Do you want to delete');"><i class="fa fa-close"></i><i class='bi bi-trash'></i></a>

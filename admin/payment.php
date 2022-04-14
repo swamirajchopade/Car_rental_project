@@ -55,7 +55,7 @@
                         <td>tejasgund02@gmail.com</td>
                         <td>9561409792</td>
                         <td>20/07/2001 12.34 PM</td>
-                        <td>Done</td>
+                        <td> <span class="badge badge-success">Success</span></td>
                     </tr>
                     <tr>
                         <th scope="row">2</th>
@@ -64,7 +64,7 @@
                         <td>Sanekt7373@gmail.com</td>
                         <td>95634234</td>
                         <td>20/07/2022 12.34 PM</td>
-                        <td>Pending</td>
+                        <td> <span class="badge badge-success">Success</span></td>
                     </tr>
                     </tr>
                 </tbody>
