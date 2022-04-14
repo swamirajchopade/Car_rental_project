@@ -35,61 +35,73 @@
       <!-- /.content-header -->
 
       <!-- Main content -->
-      <table class="table">
-        <thead class="table-dark">
-          <tr>
-            <th scope="col">#</th>
-            <th scope="col">Vehical Title</th>
-            <th scope="col">Brand</th>
-            <th scope="col">Price(per day)</th>
-            <th scope="col">Fule Type</th>
-            <th scope="col">Model Year</th>
-            <th scope="col">Sit</th>
-            <th scope="col">Action</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <th scope="row">1</th>
-            <td>Grand Vitara</td>
-            <td>Suzuki</td>
-            <td>3500</td>
-            <td>Petrol</td>
-            <td>2014</td>
-            <td>5</td>
-            <!-- <td>#</td> -->
-            <td><a href="edit-vehicle.php?id=1"><i class="fa fa-edit"></i></a>&nbsp;&nbsp;
-              <a href="manage-vehicles.php?del=1" onclick="return confirm('Do you want to delete');"><i class="fa fa-close"></i><i class='bi bi-trash'></i></a>
-            </td>
-          </tr>
-          <tr>
-            <th scope="row">2</th>
-            <td>Swift</td>
-            <td>Suzuki</td>
-            <td>2800</td>
-            <td>Diesel</td>
-            <td>2017</td>
-            <td>4</td>
-            <!-- <td>#</td> -->
-            <td><a href="edit-vehicle.php?id=1"><i class="fa fa-edit"></i></a>&nbsp;&nbsp;
-              <a href="manage-vehicles.php?del=1" onclick="return confirm('Do you want to delete');"><i class="fa fa-close"></i><i class='bi bi-trash'></i></a>
-            </td>
-          </tr>
-          <tr>
-            <th scope="row">3</th>
-            <td>Nexon</td>
-            <td>TATA</td>
-            <td>3200</td>
-            <td>CNG</td>
-            <td>2021</td>
-            <td>4</td>
-            <!-- <td>#</td> -->
-            <td><a href="edit-vehicle.php?id=1"><i class="fa fa-edit"></i></a>&nbsp;&nbsp;
-              <a href="manage-vehicles.php?del=1" onclick="return confirm('Do you want to delete');"><i class="fa fa-close"></i><i class='bi bi-trash'></i></a>
-            </td>
-          </tr>
-        </tbody>
-      </table>
+      <div class="row">
+          <div class="col-12">
+            <div class="card">
+              <div class="card-header">
+                <h3 class="card-title"><b>User Feedback Table</b></h3>
+
+                <!-- <div class="card-tools">
+                  <div class="input-group input-group-sm" style="width: 150px;">
+                    <input type="text" name="table_search" class="form-control float-right" placeholder="Search">
+
+                    <div class="input-group-append">
+                      <button type="submit" class="btn btn-default">
+                        <i class="fas fa-search"></i>
+                      </button>
+                    </div>
+                  </div>
+                </div> -->
+              </div>
+              <!-- /.card-header -->
+              <div class="card-body table-responsive p-0">
+                <table class="table table-hover text-nowrap">
+                  <thead>
+                    <tr>
+                      <th>ID</th>
+                      <th>User</th>
+                      <th>Date</th>
+                      <th>Status</th>
+                      <th>Reason</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>2</td>
+                      <td>saami chopra</td>
+                      <td>11-7-2014</td>
+                      <td><span class="badge badge-success">Approved</span></td>
+                      <td>Bacon ipsum dolor sit amet salami venison chicken flank fatback doner.</td>
+                    </tr>
+                    <tr>
+                      <td>1</td>
+                      <td>Tejas Gund</td>
+                      <td>11-7-2014</td>
+                      <td><span class="badge badge-warning">Pending</span></td>
+                      <td>Bacon ipsum dolor sit amet salami venison chicken flank fatback doner.</td>
+                    </tr>
+                    <tr>
+                      <td>40</td>
+                      <td>Sanket Nalage</td>
+                      <td>11-7-2014</td>
+                      <td><span class="badge badge-success">Approved</span></td>
+                      <td>Bacon ipsum dolor sit amet salami venison chicken flank fatback doner.</td>
+                    </tr>
+                    <tr>
+                      <td>23</td>
+                      <td>Abhi Bhoite</td>
+                      <td>11-7-2014</td>
+                      <td><span class="badge badge-danger">Denied</span></td>
+                      <td>Bacon ipsum dolor sit amet salami venison chicken flank fatback doner.</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <!-- /.card-body -->
+            </div>
+            <!-- /.card -->
+          </div>
+        </div>
       <!-- Main Content End -->
     </div>
     <?php
