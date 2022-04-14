@@ -65,7 +65,7 @@
 
 
                         <li class="nav-item">
-                            <a href="#" class="nav-link">
+                            <a href="booking_info.php" class="nav-link">
                                 <i class="nav-icon fa fa-address-card"></i>
                                 <p>
                                     Booking Car Info
@@ -76,7 +76,7 @@
 
 
                         <li class="nav-item">
-                            <a href="#" class="nav-link">
+                            <a href="client_login_info.php" class="nav-link">
                                 <i class="nav-icon fa fa-users"></i>
                                 <p>
                                     Client/Login Info
@@ -113,7 +113,7 @@
                         </div>
 
                         <li class="nav-item">
-                            <a href="#" class="nav-link">
+                            <a href="payment.php" class="nav-link">
                             <ion-icon name="wallet-outline" size="small"></ion-icon>
                                 <!-- <i class="nav-icon fa fa-archive"></i> -->
                                 <p>
@@ -124,7 +124,7 @@
                         </li>
 
                         <li class="nav-item">
-                            <a href="#" class="nav-link">
+                            <a href="feedback.php" class="nav-link">
                                 <i class="nav-icon fa fa-comments"></i>
                                 <p>
                                     Feedback
