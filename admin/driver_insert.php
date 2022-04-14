@@ -24,10 +24,10 @@
                             </CENTER>
                         </div><!-- /.col -->
                         <div class="col-sm-6">
-                            <ol class="breadcrumb float-sm-right">
+                            <!-- <ol class="breadcrumb float-sm-right">
                                 <li class="breadcrumb-item"><a href="index1.php">Car Insert Info</a>/Home</li>
 
-                            </ol>
+                            </ol> -->
                         </div><!-- /.col -->
                     </div><!-- /.row -->
 
