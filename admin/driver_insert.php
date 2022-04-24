@@ -19,9 +19,9 @@
                 <div class="container-fluid">
                     <div class="row mb-2">
                         <div class="col-sm-6">
-                            <CENTER>
-                                <h1 class="m-0 text-dark"><b> INSERT DRIVER</b></h1>
-                            </CENTER>
+
+                            <h1 class="m-0 text-dark"><b> INSERT DRIVER</b></h1>
+
                         </div><!-- /.col -->
                         <div class="col-sm-6">
                             <!-- <ol class="breadcrumb float-sm-right">
@@ -43,12 +43,43 @@
                         <input type="text" class="form-control" name="vtitle" required>
                     </div>
                     <div class="col-md-6">
-                        <label for="inputPassword4" class="form-label">Mobile NO.<span style="color:red">*</span></label>
+                        <label for="inputPassword4" class="form-label">Mobile No.<span style="color:red">*</span></label>
                         <input type="text" class="form-control" name="vbrand" required>
                     </div>
-                    <div class="col-12">
+                    <!-- Date -->
+                    <div class="col-md-6">
+                        <label>Date of birth:<span style="color:red">*</span></label>
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="far fa-calendar-alt"></i></span>
+                            </div>
+                            <input type="text" class="form-control" data-inputmask-alias="datetime" data-inputmask-inputformat="dd/mm/yyyy" data-mask  required>
+                        </div>
+                    </div>
+                    <!-- date end -->
+                    <div class="col-md-6">
+                        <label for="exampleSelectRounded0">Gender<span style="color:red">*</span></label>
+                        <select class="custom-select rounded-0" id="exampleSelectRounded0">
+                            <option>Male</option>
+                            <option>Female</option>
+                            <option>Other</option>
+                        </select>
+                    </div>
+                    <div class="col-md-6">
                         <label for="inputAddress" class="form-label">Address<span style="color:red">*</span></label>
-                        <textarea class="form-control" name="voverview" rows="2" required=""></textarea>
+                        <textarea class="form-control" name="voverview" rows="1" required=""></textarea>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="inputState" class="form-label">State<span style="color:red">*</span></label>
+                        <input type="text" class="form-control" required>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="indputdist" class="form-label">Dist<span style="color:red">*</span></label>
+                        <input type="text" class="form-control" required>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="citypin" class="form-label">Pin<span style="color:red">*</span></label>
+                        <input type="text" class="form-control" required>
                     </div>
                     <div class="col-md-6">
                         <label for="inputCity" class="form-label">Blood Group<span style="color:red">*</span></label>
@@ -75,16 +106,18 @@
                         <input type="text" class="form-control" name="vbrand" required>
                     </div>
                     <div class="col-md-6">
-                        <label for="capacity" class="form-label">Reletive phone no.<span style="color:red">*</span></label>
+                        <label for="capacity" class="form-label">alter phone no.<span style="color:red">*</span></label>
                         <input type="text" class="form-control" name="vbrand" required>
                     </div>
                     <div class="hr-dashed"></div>
-
-                   
-                    <div class="form-group">
+                    <div class="container">
                         <div class="col-sm-12">
                             <h4><b>Upload Images</b></h4>
                         </div>
+                    </div>
+
+                    <div class="form-group">
+
                     </div>
                     <div class="form-group">
                         <div class="col-sm-4">
@@ -106,9 +139,9 @@
 
                     </div>
 
-                    
+
                     <div class="col-12">
-                        <button type="submit" class="btn btn-block bg-gradient-success btn-lg">Insert</button>
+                        <button type="submit" class="btn btn-primary">Insert driver</button>
                     </div>
                 </form>
             </div>
