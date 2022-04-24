@@ -58,40 +58,40 @@
                 <table class="table table-hover text-nowrap">
                   <thead>
                     <tr>
-                      <th>ID</th>
+                      <th>FID</th>
+                      <th>UID</th>
                       <th>User</th>
                       <th>Date</th>
-                      <th>Status</th>
                       <th>Reason</th>
                     </tr>
                   </thead>
                   <tbody>
                     <tr>
-                      <td>2</td>
+                      <td>1</td>
+                      <td>1</td>
                       <td>saami chopra</td>
                       <td>11-7-2014</td>
-                      <td><span class="badge badge-success">Approved</span></td>
                       <td>Bacon ipsum dolor sit amet salami venison chicken flank fatback doner.</td>
                     </tr>
                     <tr>
-                      <td>1</td>
+                      <td>2</td>
+                      <td>3</td>
                       <td>Tejas Gund</td>
                       <td>11-7-2014</td>
-                      <td><span class="badge badge-warning">Pending</span></td>
                       <td>Bacon ipsum dolor sit amet salami venison chicken flank fatback doner.</td>
                     </tr>
                     <tr>
-                      <td>40</td>
+                      <td>3</td>
+                      <td>2</td>
                       <td>Sanket Nalage</td>
                       <td>11-7-2014</td>
-                      <td><span class="badge badge-success">Approved</span></td>
                       <td>Bacon ipsum dolor sit amet salami venison chicken flank fatback doner.</td>
                     </tr>
                     <tr>
+                      <td>4</td>
                       <td>23</td>
                       <td>Abhi Bhoite</td>
                       <td>11-7-2014</td>
-                      <td><span class="badge badge-danger">Denied</span></td>
                       <td>Bacon ipsum dolor sit amet salami venison chicken flank fatback doner.</td>
                     </tr>
                   </tbody>
