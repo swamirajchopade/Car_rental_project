@@ -39,51 +39,64 @@
       <table class="table">
         <thead class="table-dark">
           <tr>
-            <th scope="col">#</th>
-            <th scope="col">Name</th>
+            <th scope="col">Bid</th>
+            <th scope="col">Vid</th>
             <th scope="col">Vehicle</th>
+            <th scope="col">Uid</th>
+            <th scope="col">email</th>
+            <th scope="col">UName</th>
             <th scope="col">From Date</th>
             <th scope="col">To Date</th>
             <th scope="col">Destination</th>
-            <th scope="col">Payment Status</th>
+            <th scope="col">Pid</th>
             <th scope="col">Action</th>
           </tr>
         </thead>
         <tbody>
           <tr>
             <th scope="row">1</th>
-            <td>Sanket Nalage</td>
+            <th scope="col">2</th>
             <td>Innova</td>
+            <th scope="col">2</th>
+            <td>sanketnalage@gmail.com</td>
+            <td>sanket nalage</td>
             <td>30/02/2023</td>
             <td>04/03/2022</td>
             <td>Tirupati Balaji</td>
-            <td> <span class="badge badge-warning">pnding</span></td>
+            <th scope="row">1</th>
+            
             <!-- <td>#</td> -->
             <td><a href="edit-vehicle.php?id=1"><i class="fa fa-edit"></i></a>&nbsp;&nbsp;
               <a href="manage-vehicles.php?del=1" onclick="return confirm('Do you want to delete');"><i class="fa fa-close"></i><i class='bi bi-trash'></i></a>
             </td>
           </tr>
           <tr>
-            <th scope="row">2</th>
-            <td>Abhi Bhoite</td>
-            <td>BMW</td>
-            <td>01/04/2021</td>
-            <td>01/04/2021</td>
-            <td>Delhi</td>
-            <td><span class="badge badge-success">Conformed</span></td>
+          <th scope="row">1</th>
+            <th scope="col">2</th>
+            <td>Innova</td>
+            <th scope="col">2</th>
+            <td>sanketnalage@gmail.com</td>
+            <td>sanket nalage</td>
+            <td>30/02/2023</td>
+            <td>04/03/2022</td>
+            <td>Tirupati Balaji</td>
+            <th scope="row">1</th>
             <!-- <td>#</td> -->
             <td><a href="edit-vehicle.php?id=1"><i class="fa fa-edit"></i></a>&nbsp;&nbsp;
               <a href="manage-vehicles.php?del=1" onclick="return confirm('Do you want to delete');"><i class="fa fa-close"></i><i class='bi bi-trash'></i></a>
             </td>
           </tr>
           <tr>
-            <th scope="row">3</th>
-            <td>Saami Chopra</td>
-            <td>Vitar Brezza</td>
-            <td>02/05/2022</td>
-            <td>03/05/2022</td>
-            <td>Mumbai</td>
-            <td><span class="badge badge-success">Conformed</span></td>
+          <th scope="row">1</th>
+            <th scope="col">2</th>
+            <td>Innova</td>
+            <th scope="col">2</th>
+            <td>sanketnalage@gmail.com</td>
+            <td>sanket nalage</td>
+            <td>30/02/2023</td>
+            <td>04/03/2022</td>
+            <td>Tirupati Balaji</td>
+            <th scope="row">1</th>
             <!-- <td>#</td> -->
             <td><a href="edit-vehicle.php?id=1"><i class="fa fa-edit"></i></a>&nbsp;&nbsp;
               <a href="manage-vehicles.php?del=1" onclick="return confirm('Do you want to delete');"><i class="fa fa-close"></i><i class='bi bi-trash'></i></a>
