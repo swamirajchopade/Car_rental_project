@@ -38,11 +38,12 @@
             <table class="table">
                 <thead class="table-dark">
                     <tr>
-                        <th scope="col">#</th>
-                        <th scope="col">Name</th>
+                        <th scope="col">pid</th>
+                        <th scope="col">bid</th>
+
                         <th scope="col">Transition ID</th>
-                        <th scope="col">Phone</th>
                         <th scope="col">Email</th>
+                        <th scope="col">Phone</th>
                         <th scope="col">Date/Time </th>
                         <th scope="col">Payment Status </th>
                     </tr>
@@ -50,7 +51,8 @@
                 <tbody>
                     <tr>
                         <th scope="row">1</th>
-                        <td>Tejas Gund</td>
+                        <th scope="row">2</th>
+
                         <td>TD9561409792</td>
                         <td>tejasgund02@gmail.com</td>
                         <td>9561409792</td>
@@ -59,7 +61,8 @@
                     </tr>
                     <tr>
                         <th scope="row">2</th>
-                        <td>Sanket</td>
+                        <th scope="row">3</th>
+
                         <td>TD140979ss2</td>
                         <td>Sanekt7373@gmail.com</td>
                         <td>95634234</td>
