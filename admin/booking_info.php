@@ -1,3 +1,11 @@
+<?php
+session_start();
+if ($_SESSION["login"] == true) {
+} else {
+  header("Location:index.php");
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -64,14 +72,14 @@
             <td>04/03/2022</td>
             <td>Tirupati Balaji</td>
             <th scope="row">1</th>
-            
+
             <!-- <td>#</td> -->
             <td><a href="edit-vehicle.php?id=1"><i class="fa fa-edit"></i></a>&nbsp;&nbsp;
               <a href="manage-vehicles.php?del=1" onclick="return confirm('Do you want to delete');"><i class="fa fa-close"></i><i class='bi bi-trash'></i></a>
             </td>
           </tr>
           <tr>
-          <th scope="row">1</th>
+            <th scope="row">1</th>
             <th scope="col">2</th>
             <td>Innova</td>
             <th scope="col">2</th>
@@ -87,7 +95,7 @@
             </td>
           </tr>
           <tr>
-          <th scope="row">1</th>
+            <th scope="row">1</th>
             <th scope="col">2</th>
             <td>Innova</td>
             <th scope="col">2</th>

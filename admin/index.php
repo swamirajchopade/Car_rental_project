@@ -1,7 +1,24 @@
 <?PHP
-if($_SERVER['REQUEST_METHOD']=="POST"){
-   
-header("location: index1.php");
+session_start();
+include('config.php');
+if (isset($_POST['login'])) {
+    $email = $_POST['username'];
+    $password = $_POST['password'];
+
+    $query=mysqli_query($conn,"SELECT * FROM admin WHERE username='$email' AND password='$password'");
+    $row=mysqli_fetch_array($query);
+
+    if(is_array($row)){
+         $_SESSION["username"]=$row["username"];
+         $_SESSION["password"]=$row["password"];
+    }else{
+       echo "Username and Password Falied";
+    }
+}
+if (isset($_SESSION["username"])) {
+    $_SESSION["login"]=true;
+    header("Location:index1.php");
+
 }
 
 ?>
@@ -47,9 +64,9 @@ header("location: index1.php");
             <div class="card-body login-card-body">
                 <p class="login-box-msg">Sign In</p>
 
-                <form method="post">
+                <form method="post" action="index.php">
                     <div class="input-group mb-3">
-                        <input type="email" class="form-control" placeholder="Email">
+                        <input type="email" name="username" class="form-control" placeholder="Email">
                         <div class="input-group-append">
                             <div class="input-group-text">
                                 <span class="fas fa-envelope"></span>
@@ -57,7 +74,7 @@ header("location: index1.php");
                         </div>
                     </div>
                     <div class="input-group mb-3">
-                        <input type="password" class="form-control" placeholder="Password">
+                        <input type="password" name="password" class="form-control" placeholder="Password">
                         <div class="input-group-append">
                             <div class="input-group-text">
                                 <span class="fas fa-lock"></span>
@@ -65,31 +82,15 @@ header("location: index1.php");
                         </div>
                     </div>
                     <div class="row">
-                        <!-- <div class="col-8">
-                            <div class="icheck-primary">
-                                <input type="checkbox" id="remember">
-                                <label for="remember">
-                                    Remember Me
-                                </label>
-                            </div>
-                        </div> -->
+
                         <!-- /.col -->
                         <div class="col-12">
-                            <button type="submit" class="btn btn-primary btn-block ">Sign In</button>
+                            <button type="submit" name="login" class="btn btn-primary btn-block ">Sign In</button>
                         </div>
                         <!-- /.col -->
                     </div>
                 </form>
 
-
-                <!-- /.social-auth-links -->
-
-                <!-- <p class="mb-1">
-                    <a href="forgot-password.html">I forgot my password</a>
-                </p>
-                <p class="mb-0">
-                    <a href="register.html" class="text-center">Register a new membership</a>
-                </p> -->
             </div>
             <!-- /.login-card-body -->
         </div>

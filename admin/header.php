@@ -66,7 +66,7 @@
           <i class="fa fa-pen mr-2"></i> Edit
           </a>
           <div class="dropdown-divider"></div>
-          <a href="#" class="dropdown-item">
+          <a href="logout.php" class="dropdown-item">
           <i class="fa fa-long-arrow-alt-right mr-2"></i> Logout
           </a>
           </div>
