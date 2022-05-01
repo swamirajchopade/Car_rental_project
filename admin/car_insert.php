@@ -1,10 +1,17 @@
 <?php
 session_start();
+include "config.php";
+
 if ($_SESSION["login"] == true) {
+    // if ($_SERVER["REQUEST_METHOD"]) {
+
+    // }
 } else {
-   header("Location:index.php");
+    header("Location:index.php");
 }
+
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -30,9 +37,6 @@ if ($_SESSION["login"] == true) {
                             <h1 class="m-0 text-dark"><b> Car Insert</b></h1>
                         </div><!-- /.col -->
                         <div class="col-sm-6">
-                            <!-- <ol class="breadcrumb float-sm-right">
-                                <li class="breadcrumb-item"><a href="index1.php">Car Insert Info</a>/Home</li>
-
                             </ol> -->
                         </div><!-- /.col -->
                     </div><!-- /.row -->
@@ -40,10 +44,10 @@ if ($_SESSION["login"] == true) {
                 </div><!-- /.container-fluid -->
             </div>
             <!-- /.content-header -->
-
+            <!-- action="car_operation_insert.php" -->
             <!-- Main content -->
             <div class="container m-1">
-                <form class="row g-3">
+                <form class="row g-3" method="post" action="car_operation_insert.php" >
                     <div class="col-md-6">
                         <label for="inputEmail4" class="form-label">Vehicle Title<span style="color:red">*</span></label>
                         <input type="text" class="form-control" name="vtitle" required>
@@ -58,7 +62,7 @@ if ($_SESSION["login"] == true) {
                     </div>
                     <div class="col-md-6">
                         <label for="inputCity" class="form-label">Price per day (In rupees)<span style="color:red">*</span></label>
-                        <input type="text" class="form-control" placeholder="₹" required>
+                        <input type="text" class="form-control" name="pdprice" placeholder="₹" required>
                     </div>
 
                     <label class="col-sm-2 control-label">Select Fuel Type<span style="color:red">*</span></label>
@@ -71,14 +75,14 @@ if ($_SESSION["login"] == true) {
                         </select>
                     </div>
 
-                    
+
                     <div class="col-md-6">
                         <label for="year" class="form-label">Model year<span style="color:red">*</span></label>
-                        <input type="text" class="form-control" name="vtitle" required>
+                        <input type="text" class="form-control" name="myear" required>
                     </div>
                     <div class="col-md-6">
-                        <label for="capacity" class="form-label">Setting capacity<span style="color:red">*</span></label>
-                        <input type="text" class="form-control" name="vbrand" required>
+                        <label for="capacity" class="form-label">Sitting capacity<span style="color:red">*</span></label>
+                        <input type="text" class="form-control" name="scapacity" required>
                     </div>
                     <div class="hr-dashed"></div>
 
@@ -106,21 +110,24 @@ if ($_SESSION["login"] == true) {
                             Image 4<span style="color:red">*</span><input type="file" name="img4" required>
                         </div>
                         <div class="col-sm-4">
-                            Image 5<input type="file" name="img5">
+                            Image 5<span style="color:red">*</span><input type="file" name="img5" required>
                         </div>
 
+                        <div class="col-sm-4">
+                            Image 6<span style="color:red">*</span><input type="file" name="img6" required>
+                        </div>
                     </div>
-                   
+
                     <div class="col-12">
                         <label class="form-label" for="gridCheck">Speciality</label>
                         <div class="form-check">
-                            <input class="form-check-input" type="checkbox" id="gridCheck">
+                            <input class="form-check-input" name="ac" type="checkbox" value="1" id="gridCheck">
                             <label class="form-check-label" for="gridCheck">
                                 Air Condition
                             </label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" type="checkbox" id="gridCheck">
+                            <input class="form-check-input" name="airbag" value="1" type="checkbox" id="gridCheck">
                             <label class="form-check-label" for="gridCheck">
                                 Airbag (Safety)
                             </label>
