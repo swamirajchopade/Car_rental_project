@@ -75,3 +75,7 @@
 
 
                           INSERT INTO tbldriver(dname, dcontactno, daltno, dgender, ddob, daddress, dstate, ddist, dpin, dbloodgroup, ddlno, dvehicleno, dimg1, dimg2, dimg3, dimg4) VALUES ( 'tejasgund', '9561409297', '9562625665', '1', '20/07/2001', 'ap nangaon amonimal', 'maharashtra', 'pune', '412203', 'A+', 'MH42 00007350142', 'MH42AP5304', 'asdfadf', 'asdfasdf', 'asdfsdaf', 'asdfadsf');
+
+
+
+                          DELETE FROM `car` WHERE `car`.`vid` = 30
