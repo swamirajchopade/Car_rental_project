@@ -3,9 +3,7 @@ session_start();
 include "config.php";
 
 if ($_SESSION["login"] == true) {
-    // if ($_SERVER["REQUEST_METHOD"]) {
-
-    // }
+    
 } else {
     header("Location:index.php");
 }
@@ -37,7 +35,7 @@ if ($_SESSION["login"] == true) {
                             <h1 class="m-0 text-dark"><b> Car Insert</b></h1>
                         </div><!-- /.col -->
                         <div class="col-sm-6">
-                            </ol> -->
+                           
                         </div><!-- /.col -->
                     </div><!-- /.row -->
 
@@ -114,7 +112,7 @@ if ($_SESSION["login"] == true) {
                         </div>
 
                         <div class="col-sm-4">
-                            Image 6<span style="color:red">*</span><input type="file" name="img6" required>
+                            Image 6<span style="color:red"></span><input type="file" name="img6">
                         </div>
                     </div>
 
