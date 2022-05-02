@@ -4,6 +4,7 @@ if ($_SESSION["login"] == true) {
 } else {
    header("Location:index.php");
 }
+include "config.php";
 ?>
 
 <!DOCTYPE html>
@@ -60,45 +61,29 @@ if ($_SESSION["login"] == true) {
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <th scope="row">1</th>
-            <td>Grand Vitara</td>
-            <td>Suzuki</td>
-            <td>3500</td>
-            <td>Petrol</td>
-            <td>2014</td>
-            <td>5</td>
+          
+          <?php           
+            $sql = "SELECT * FROM `car`";
+            $result = mysqli_query($conn, $sql);
+            $sno = 0;
+            while($row = mysqli_fetch_assoc($result)){
+              $sno = $sno + 1;
+           echo "<tr>
+            <th scope='row'>".$sno."</th>
+            <td>".$row['vtitle']."</td>
+            <td>".$row['vbrand']."</td>
+            <td>".$row['pdprice']."</td>
+            <td>".$row['ftype']."</td>
+            <td>".$row['myear']."</td>
+            <td>".$row['scapacity']."</td>
             <!-- <td>#</td> -->
-            <td><a href="edit-vehicle.php?id=1"><i class="fa fa-edit"></i></a>&nbsp;&nbsp;
-              <a href="manage-vehicles.php?del=1" onclick="return confirm('Do you want to delete');"><i class="fa fa-close"></i><i class='bi bi-trash'></i></a>
+            <td><a href='edit-vehicle.php?id=1'><i class='fa fa-edit'></i></a>&nbsp;&nbsp;
+              <a href='manage-vehicles.php?del=1' onclick='return confirm('Do you want to delete');'><i class='fa fa-close'></i><i class='bi bi-trash'></i></a>
             </td>
-          </tr>
-          <tr>
-            <th scope="row">2</th>
-            <td>Swift</td>
-            <td>Suzuki</td>
-            <td>2800</td>
-            <td>Diesel</td>
-            <td>2017</td>
-            <td>4</td>
-            <!-- <td>#</td> -->
-            <td><a href="edit-vehicle.php?id=1"><i class="fa fa-edit"></i></a>&nbsp;&nbsp;
-              <a href="manage-vehicles.php?del=1" onclick="return confirm('Do you want to delete');"><i class="fa fa-close"></i><i class='bi bi-trash'></i></a>
-            </td>
-          </tr>
-          <tr>
-            <th scope="row">3</th>
-            <td>Nexon</td>
-            <td>TATA</td>
-            <td>3200</td>
-            <td>CNG</td>
-            <td>2021</td>
-            <td>4</td>
-            <!-- <td>#</td> -->
-            <td><a href="edit-vehicle.php?id=1"><i class="fa fa-edit"></i></a>&nbsp;&nbsp;
-              <a href="manage-vehicles.php?del=1" onclick="return confirm('Do you want to delete');"><i class="fa fa-close"></i><i class='bi bi-trash'></i></a>
-            </td>
-          </tr>
+          </tr>";
+          } 
+             mysqli_close($conn);
+          ?>
         </tbody>
       </table>
       <!-- Main Content End -->
