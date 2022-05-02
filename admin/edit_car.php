@@ -3,7 +3,6 @@ session_start();
 include "config.php";
 
 if ($_SESSION["login"] == true) {
-    
 } else {
     header("Location:index.php");
 }
@@ -32,10 +31,10 @@ if ($_SESSION["login"] == true) {
                 <div class="container-fluid">
                     <div class="row mb-2">
                         <div class="col-sm-6">
-                            <h1 class="m-0 text-dark"><b> Car Insert</b></h1>
+                            <h1 class="m-0 text-dark"><b> Edit Car Info</b></h1>
                         </div><!-- /.col -->
                         <div class="col-sm-6">
-                           
+
                         </div><!-- /.col -->
                     </div><!-- /.row -->
 
@@ -44,28 +43,65 @@ if ($_SESSION["login"] == true) {
             <!-- /.content-header -->
             <!-- action="car_operation_insert.php" -->
             <!-- Main content -->
-            <div class="container m-1">
-                <form class="row g-3" method="post" action="car_operation_insert.php" >
+
+            <?php
+             $v_id = $_GET['id'];
+            if($_SERVER['REQUEST_METHOD'] == "POST"){
+            include "config.php";
+           
+           
+            $v_id = $_POST['vid'];
+            $vtitle = $_POST['vtitle'];
+            $vbran = $_POST['vbrand'];
+            $voverview = $_POST['voverview'];
+            $pdprice = $_POST['pdprice'];
+            $ftype = $_POST['fueltype'];
+            $myear = $_POST['myear'];
+            $scapacity = $_POST['scapacity'];
+            $vimg1 = $_POST['img1'];
+            $vimg2 = $_POST['img2'];
+            $vimg3 = $_POST['img3'];
+            $vimg4 = $_POST['img4'];
+            $vimg5 = $_POST['img5'];
+            $vimg6 = $_POST['img6'];
+            $ac = $_POST['ac'];
+            $airbag = $_POST['airbag'];
+
+            $sql = "UPDATE car SET vtitle = '{$vtitle}' WHERE vid = '{$v_id}'";
+            // ,vbrand = '{$vbran}', voverview = '{$voverview}', pdprice = '{$pdprice}', ftype = '{$ftype}', myear = '{$myear}', scapacity = '{$scapacity}', vimg1 = '{$vimg1}',vimg2 = '{$vimg2}',vimg3 = '{$vimg3}',vimg4 = '{$vimg4}',vimg5 = '{$vimg5}',vimg6 = '{$vimg6}' , ac = '{$ac}',  airbag = '{$airbag}'
+            $result = mysqli_query($conn, $sql) or die("Query Unsuccessful.");
+            header("Location: car_info.php");
+            
+            mysqli_close($conn);
+        }
+         $sql_1="SELECT * FROM car";
+         $result_1= mysqli_query($conn, $sql_1) or die("Query Unsuccessful.");
+         $row = mysqli_fetch_assoc($result_1);
+            ?>
+            
+         <div class="container m-1">
+                <form class="row g-3" method="post" action="<?php $_SERVER['PHP_SELF']; ?>">
                     <div class="col-md-6">
                         <label for="inputEmail4" class="form-label">Vehicle Title<span style="color:red">*</span></label>
-                        <input type="text" class="form-control" name="vtitle" required>
+                        <input type="hidden" name="vid" value="<?php echo $row['vid']; ?>" />
+                        <input type="text" class="form-control" name="vtitle" value="<?php echo $row['vtitle']; ?>">
                     </div>
-                    <div class="col-md-6">
+                    <div class=" col-md-6">
                         <label for="inputPassword4" class="form-label">Vehicle Brand<span style="color:red">*</span></label>
-                        <input type="text" class="form-control" name="vbrand" required>
+                        <input type="text" class="form-control" name="vbrand" value="<?php echo $row['vbrand']; ?>">
                     </div>
-                    <div class="col-12">
+                    <div class=" col-12">
                         <label for="inputAddress" class="form-label">Overview<span style="color:red">*</span></label>
-                        <textarea class="form-control" name="voverview" rows="2" required=""></textarea>
+                        <textarea class="form-control" name="voverview" rows="2" value="<?php echo $row['voverview']; ?>"></textarea>
                     </div>
-                    <div class="col-md-6">
+                    <div class=" col-md-6">
                         <label for="inputCity" class="form-label">Price per day (In rupees)<span style="color:red">*</span></label>
-                        <input type="text" class="form-control" name="pdprice" placeholder="₹" required>
+                        <input type="text" class="form-control" name="pdprice" placeholder="₹" value="<?php echo $row['pdprice']; ?>">
                     </div>
 
                     <label class="col-sm-2 control-label">Select Fuel Type<span style="color:red">*</span></label>
                     <div class="col-sm-1">
-                        <select class="selectpicker" name="fueltype" required>
+                        <select class="selectpicker" name="fueltype" value="<?php echo $row['fueltype']; ?>">
                             <option value=""> Select </option>
                             <option value="Petrol">Petrol</option>
                             <option value="Diesel">Diesel</option>
@@ -76,11 +112,11 @@ if ($_SESSION["login"] == true) {
 
                     <div class="col-md-6">
                         <label for="year" class="form-label">Model year<span style="color:red">*</span></label>
-                        <input type="text" class="form-control" name="myear" required>
+                        <input type="text" class="form-control" name="myear" value="<?php echo $row['myear']; ?>">
                     </div>
                     <div class="col-md-6">
                         <label for="capacity" class="form-label">Sitting capacity<span style="color:red">*</span></label>
-                        <input type="text" class="form-control" name="scapacity" required>
+                        <input type="text" class="form-control" name="scapacity" value="<?php echo $row['scapacity']; ?>">
                     </div>
                     <div class="hr-dashed"></div>
 
@@ -92,49 +128,50 @@ if ($_SESSION["login"] == true) {
                     </div>
                     <div class="form-group">
                         <div class="col-sm-4">
-                            Image 1 <span style="color:red">*</span><input type="file" name="img1" required>
+                            Image 1 <span style="color:red">*</span><input type="file" name="img1" value="<?php echo $row['vimg1']; ?>">
                         </div>
                         <div class="col-sm-4">
-                            Image 2<span style="color:red">*</span><input type="file" name="img2" required>
+                            Image 2<span style="color:red">*</span><input type="file" name="img2" value="<?php echo $row['vimg1']; ?>">
                         </div>
                         <div class="col-sm-4">
-                            Image 3<span style="color:red">*</span><input type="file" name="img3" required>
+                            Image 3<span style="color:red">*</span><input type="file" name="img3" value="<?php echo $row['vimg1']; ?>">
                         </div>
                     </div>
 
 
                     <div class="form-group">
                         <div class="col-sm-4">
-                            Image 4<span style="color:red">*</span><input type="file" name="img4" required>
+                            Image 4<span style="color:red">*</span><input type="file" name="img4" value="<?php echo $row['vimg1']; ?>">
                         </div>
                         <div class="col-sm-4">
-                            Image 5<span style="color:red">*</span><input type="file" name="img5" required>
+                            Image 5<span style="color:red">*</span><input type="file" name="img5" value="<?php echo $row['vimg1']; ?>">
                         </div>
 
                         <div class="col-sm-4">
-                            Image 6<span style="color:red"></span><input type="file" name="img6">
+                            Image 6<span style="color:red"></span><input type="file" name="img6" value="<?php echo $row['vimg1']; ?>">
                         </div>
                     </div>
 
                     <div class="col-12">
                         <label class="form-label" for="gridCheck">Speciality</label>
                         <div class="form-check">
-                            <input class="form-check-input" name="ac" type="checkbox" value="1" id="gridCheck">
+                            <input class="form-check-input" name="ac" type="checkbox" value="1" id="gridCheck" value="<?php echo $row['ac']; ?>">
                             <label class="form-check-label" for="gridCheck">
                                 Air Condition
                             </label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" name="airbag" value="1" type="checkbox" id="gridCheck">
+                            <input class="form-check-input" name="airbag" value="1" type="checkbox" id="gridCheck" value="<?php echo $row['airbag']; ?>">
                             <label class="form-check-label" for="gridCheck">
                                 Airbag (Safety)
                             </label>
                         </div>
                     </div>
                     <div class="col-12">
-                        <button type="submit" class="btn btn-primary">Insert</button>
+                        <button type="submit" class="btn btn-primary">Update</button>
                     </div>
                 </form>
+                
             </div>
             <!-- Main Content End -->
         </div>

@@ -47,6 +47,14 @@ include "config.php";
       <!-- /.content-header -->
 
       <!-- Main content -->
+      <?php
+          include 'config.php';
+
+          $sql = "SELECT * FROM car";
+          $result = mysqli_query($conn, $sql) or die("Query Unsuccessful.");
+
+          if(mysqli_num_rows($result) > 0)  {
+          ?>
       <table class="table">
         <thead class="table-dark">
           <tr>
@@ -62,30 +70,30 @@ include "config.php";
         </thead>
         <tbody>
           
-          <?php           
-            $sql = "SELECT * FROM `car`";
-            $result = mysqli_query($conn, $sql);
-            $sno = 0;
+        <?php
             while($row = mysqli_fetch_assoc($result)){
-              $sno = $sno + 1;
-           echo "<tr>
-            <th scope='row'>".$sno."</th>
-            <td>".$row['vtitle']."</td>
-            <td>".$row['vbrand']."</td>
-            <td>".$row['pdprice']."</td>
-            <td>".$row['ftype']."</td>
-            <td>".$row['myear']."</td>
-            <td>".$row['scapacity']."</td>
-            <!-- <td>#</td> -->
-            <td><a href='edit-vehicle.php?id=1'><i class='fa fa-edit'></i></a>&nbsp;&nbsp;
-              <a href='delete-vehicles.php?del=1' onclick='return confirm('Do you want to delete');'><i class='fa fa-close'></i><i class='bi bi-trash'></i></a>
-            </td>
-          </tr>";
-          } 
-             mysqli_close($conn);
           ?>
+            <tr>
+            <th scope='row'><?php echo $row['vid']; ?></th>
+            <td><?php echo $row['vtitle']; ?></td>
+            <td><?php echo $row['vbrand']; ?></td>
+            <td><?php echo $row['pdprice']; ?></td>
+            <td><?php echo $row['ftype']; ?></td>
+            <td><?php echo $row['myear']; ?></td>
+            <td><?php echo $row['scapacity']; ?></td>
+            <td><a href='edit_car.php?id=<?php echo $row['vid']; ?>'><i class='fa fa-edit'></i></a>&nbsp;&nbsp;
+              <a href='delete_car.php?id=<?php echo $row['vid']; ?> '><i class='fa fa-close'></i><i class='bi bi-trash'></i></a>
+            </td>
+          </tr>
+          <?php } ?>
         </tbody>
       </table>
+      <?php }
+        else{
+          echo "<h2>No Record Found</h2>";
+            }
+        mysqli_close($conn);
+      ?>
       <!-- Main Content End -->
     </div>
     <?php
