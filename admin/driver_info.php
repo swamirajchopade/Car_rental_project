@@ -4,6 +4,7 @@ if ($_SESSION["login"] == true) {
 } else {
    header("Location:index.php");
 }
+include "config.php";
 ?>
 
 <!DOCTYPE html>
@@ -59,49 +60,36 @@ if ($_SESSION["login"] == true) {
             <th scope="col">Driving lic no.</th>
             <th scope="col">Vehical no.</th>
             <th scope="col">Home Phone no.</th>
+            <th scope="col">Action</th>
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <th scope="row">1</th>
-            <td>Tejas Gund</td>
-            <td>9284802942</td>
-            <td>A/p nangaon(Amonimal) pune 412203</td>
-            <td>A+</td>
-            <td>MH42AP5304</td>
-            <td>9909809987</td>
+         
+         
+          <?php           
+            $sql = "SELECT * FROM `tbldriver`";
+            $result = mysqli_query($conn, $sql);
+            $sno = 0;
+            while($row = mysqli_fetch_assoc($result)){
+              $sno = $sno + 1;
+           echo "<tr>
+            <th scope='row'>".$sno."</th>
+            <td>".$row['dname']."</td>
+            <td>".$row['dcontactno']."</td>
+            <td>".$row['daddress']."</td>
+            <td>".$row['dbloodgroup']."</td>
+            <td>".$row['ddlno']."</td>
+            <td>".$row['dvehicleno']."</td>
+            <td>".$row['daltno']."</td>
             <!-- <td>#</td> -->
-            <td><a href="edit-vehicle.php?id=1"><i class="fa fa-edit"></i></a>&nbsp;&nbsp;
-              <a href="manage-vehicles.php?del=1" onclick="return confirm('Do you want to delete');"><i class="fa fa-close"></i><i class='bi bi-trash'></i></a>
+            <td><a href='edit-vehicle.php?id=1'><i class='fa fa-edit'></i></a>&nbsp;&nbsp;
+              <a href='manage-vehicles.php?del=1' onclick='return confirm('Do you want to delete');'><i class='fa fa-close'></i><i class='bi bi-trash'></i></a>
             </td>
-          </tr>
-          <tr>
-            <th scope="row">2</th>
-            <td>Sanket Nalage</td>
-            <td>908894232</td>
-            <td>Ap Rui baramati 413102</td>
-            <td>O+</td>
-            <td>MH23AS2323</td>
-            <td>2348972323</td>
-            <!-- <td>#</td> -->
-            <td><a href="edit-vehicle.php?id=1"><i class="fa fa-edit"></i></a>&nbsp;&nbsp;
-              <a href="manage-vehicles.php?del=1" onclick="return confirm('Do you want to delete');"><i class="fa fa-close"></i><i class='bi bi-trash'></i></a>
-            </td>
-          </tr>
-          <tr>
-            <th scope="row">3</th>
-            <td>SWAMI CHOPADE</td>
-            <td>238492378</td>
-            <td>AP katewadi baramati 413129</td>
-            <td>B+</td>
-            <td>MH43DS9843</td>
-            <td>3897423123</td>
-
-            <!-- <td>#</td> -->
-            <td><a href="edit-vehicle.php?id=1"><i class="fa fa-edit"></i></a>&nbsp;&nbsp;
-              <a href="manage-vehicles.php?del=1" onclick="return confirm('Do you want to delete');"><i class="fa fa-close"></i><i class='bi bi-trash'></i></a>
-            </td>
-          </tr>
+          </tr>";
+          } 
+             mysqli_close($conn);
+          ?>
+        
         </tbody>
       </table>
       <!-- Main Content End -->

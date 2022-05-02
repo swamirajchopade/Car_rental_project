@@ -45,14 +45,14 @@ if ($_SESSION["login"] == true) {
 
             <!-- Main content -->
             <div class="container m-1">
-                <form class="row g-3">
+                <form class="row g-3" method="post" action="driver_opration_insert.php">
                     <div class="col-md-6">
                         <label for="inputEmail4" class="form-label">Full Name<span style="color:red">*</span></label>
-                        <input type="text" class="form-control" name="vtitle" required>
+                        <input type="text" class="form-control" name="dname" required>
                     </div>
                     <div class="col-md-6">
                         <label for="inputPassword4" class="form-label">Mobile No.<span style="color:red">*</span></label>
-                        <input type="text" class="form-control" name="vbrand" required>
+                        <input type="text" class="form-control" name="dcontactno" required>
                     </div>
                     <!-- Date -->
                     <div class="col-md-6">
@@ -61,61 +61,49 @@ if ($_SESSION["login"] == true) {
                             <div class="input-group-prepend">
                                 <span class="input-group-text"><i class="far fa-calendar-alt"></i></span>
                             </div>
-                            <input type="text" class="form-control" data-inputmask-alias="datetime" data-inputmask-inputformat="dd/mm/yyyy" data-mask  required>
+                            <input type="text" class="form-control" name="ddob" data-inputmask-alias="datetime" data-inputmask-inputformat="dd/mm/yyyy" data-mask  required>
                         </div>
                     </div>
                     <!-- date end -->
                     <div class="col-md-6">
                         <label for="exampleSelectRounded0">Gender<span style="color:red">*</span></label>
-                        <select class="custom-select rounded-0" id="exampleSelectRounded0">
-                            <option>Male</option>
-                            <option>Female</option>
-                            <option>Other</option>
+                        <select class="custom-select rounded-0" name="dgender" id="exampleSelectRounded0">
+                            <option value="1">Male</option>
+                            <option value="2">Female</option>
+                            <option value="3">Other</option>
                         </select>
                     </div>
                     <div class="col-md-6">
                         <label for="inputAddress" class="form-label">Address<span style="color:red">*</span></label>
-                        <textarea class="form-control" name="voverview" rows="1" required=""></textarea>
+                        <textarea class="form-control" name="daddress" rows="1" required=""></textarea>
                     </div>
                     <div class="col-md-6">
                         <label for="inputState" class="form-label">State<span style="color:red">*</span></label>
-                        <input type="text" class="form-control" required>
+                        <input type="text" class="form-control" name="dstate" required>
                     </div>
                     <div class="col-md-6">
                         <label for="indputdist" class="form-label">Dist<span style="color:red">*</span></label>
-                        <input type="text" class="form-control" required>
+                        <input type="text" class="form-control" name="ddist" required>
                     </div>
                     <div class="col-md-6">
                         <label for="citypin" class="form-label">Pin<span style="color:red">*</span></label>
-                        <input type="text" class="form-control" required>
+                        <input type="text" class="form-control" name="dpin" required>
                     </div>
                     <div class="col-md-6">
                         <label for="inputCity" class="form-label">Blood Group<span style="color:red">*</span></label>
-                        <input type="text" class="form-control" required>
+                        <input type="text" class="form-control" name="dbloodgroup" required>
                     </div>
-
-                    <!-- <label class="col-sm-2 control-label">xfghfghxfghc<span style="color:red">*</span></label>
-                    <div class="col-sm-1">
-                        <select class="selectpicker" name="fueltype" required>
-                            <option value=""> Select </option>
-                            <option value="Petrol">Petrol</option>
-                            <option value="Diesel">Diesel</option>
-                            <option value="CNG">CNG</option>
-                        </select>
-                    </div> -->
-
-
                     <div class="col-md-6">
                         <label for="year" class="form-label">Driving Lic. NO.<span style="color:red">*</span></label>
-                        <input type="text" class="form-control" name="vtitle" required>
+                        <input type="text" class="form-control" name="ddlno" required>
                     </div>
                     <div class="col-md-6">
                         <label for="capacity" class="form-label">Releted Vehicle no.<span style="color:red">*</span></label>
-                        <input type="text" class="form-control" name="vbrand" required>
+                        <input type="text" class="form-control" name="dvehicleno" required>
                     </div>
                     <div class="col-md-6">
                         <label for="capacity" class="form-label">alter phone no.<span style="color:red">*</span></label>
-                        <input type="text" class="form-control" name="vbrand" required>
+                        <input type="text" class="form-control" name="daltno" required>
                     </div>
                     <div class="hr-dashed"></div>
                     <div class="container">
@@ -129,20 +117,20 @@ if ($_SESSION["login"] == true) {
                     </div>
                     <div class="form-group">
                         <div class="col-sm-4">
-                            Driving lic. <span style="color:red">*</span><input type="file" name="img1" required>
+                            Driving lic. <span style="color:red">*</span><input type="file" name="dimg1" required>
                         </div>
                         <div class="col-sm-4">
-                            Aaddhar card<span style="color:red">*</span><input type="file" name="img2" required>
+                            Aaddhar card<span style="color:red">*</span><input type="file" name="dimg2" required>
                         </div>
                     </div>
                     <div class="form-group">
                         <div class="col-sm-4">
-                            Driver photo<span style="color:red">*</span><input type="file" name="img3" required>
+                            Driver photo<span style="color:red">*</span><input type="file" name="dimg3" required>
                         </div>
 
 
                         <div class="col-sm-4">
-                            Bank passbook<span style="color:red">*</span><input type="file" name="img4" required>
+                            Bank passbook<span style="color:red">*</span><input type="file" name="dimg4" required>
                         </div>
 
                     </div>
