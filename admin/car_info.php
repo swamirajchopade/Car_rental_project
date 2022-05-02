@@ -78,7 +78,7 @@ include "config.php";
             <td>".$row['scapacity']."</td>
             <!-- <td>#</td> -->
             <td><a href='edit-vehicle.php?id=1'><i class='fa fa-edit'></i></a>&nbsp;&nbsp;
-              <a href='manage-vehicles.php?del=1' onclick='return confirm('Do you want to delete');'><i class='fa fa-close'></i><i class='bi bi-trash'></i></a>
+              <a href='delete-vehicles.php?del=1' onclick='return confirm('Do you want to delete');'><i class='fa fa-close'></i><i class='bi bi-trash'></i></a>
             </td>
           </tr>";
           } 
