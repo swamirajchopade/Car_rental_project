@@ -49,6 +49,14 @@ include "config.php";
       <!-- /.content-header -->
 
       <!-- Main content -->
+      <?php
+          include 'config.php';
+
+          $sql = "SELECT * FROM tbldriver";
+          $result = mysqli_query($conn, $sql) or die("Query Unsuccessful.");
+
+          if(mysqli_num_rows($result) > 0)  {
+          ?>
       <table class="table">
         <thead class="table-dark">
           <tr>
@@ -65,33 +73,35 @@ include "config.php";
         </thead>
         <tbody>
          
-         
-          <?php           
-            $sql = "SELECT * FROM `tbldriver`";
-            $result = mysqli_query($conn, $sql);
-            $sno = 0;
+           
+        <?php
             while($row = mysqli_fetch_assoc($result)){
-              $sno = $sno + 1;
-           echo "<tr>
-            <th scope='row'>".$sno."</th>
-            <td>".$row['dname']."</td>
-            <td>".$row['dcontactno']."</td>
-            <td>".$row['daddress']."</td>
-            <td>".$row['dbloodgroup']."</td>
-            <td>".$row['ddlno']."</td>
-            <td>".$row['dvehicleno']."</td>
-            <td>".$row['daltno']."</td>
-            <!-- <td>#</td> -->
-            <td><a href='edit-vehicle.php?id=1'><i class='fa fa-edit'></i></a>&nbsp;&nbsp;
-              <a href='manage-vehicles.php?del=1' onclick='return confirm('Do you want to delete');'><i class='fa fa-close'></i><i class='bi bi-trash'></i></a>
-            </td>
-          </tr>";
-          } 
-             mysqli_close($conn);
           ?>
+           <tr>
+            <th scope='row'><?php echo $row['did']; ?></th>
+            <td><?php echo $row['dname']; ?></td>
+            <td><?php echo $row['dcontactno']; ?></td>
+            <td><?php echo $row['daddress']; ?></td>
+            <td><?php echo $row['dbloodgroup']; ?></td>
+            <td><?php echo $row['ddlno']; ?></td>
+            <td><?php echo $row['dvehicleno']; ?></td>
+            <td><?php echo $row['daltno']; ?></td>
+            <!-- <td>#</td> -->
+            <td><a href='edit_driver.php?id=<?php echo $row['did']; ?>'><i class='fa fa-edit'></i></a>&nbsp;&nbsp;
+              <a href='delete_driver.php?id=<?php echo $row['did']; ?>'><i class='fa fa-close'></i><i class='bi bi-trash'></i></a>
+            </td>
+          </tr>
+          <?php } ?>
+          
         
         </tbody>
       </table>
+      <?php }
+        else{
+          echo "<h2>No Record Found</h2>";
+            }
+        mysqli_close($conn);
+      ?>
       <!-- Main Content End -->
     </div>
     <?php

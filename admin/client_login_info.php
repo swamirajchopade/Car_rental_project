@@ -45,6 +45,14 @@ if ($_SESSION["login"] == true) {
       <!-- /.content-header -->
 
       <!-- Main content -->
+      <?php
+            include 'config.php';
+
+            $sql = "SELECT * FROM tbluser";
+            $result = mysqli_query($conn, $sql) or die("Query Unsuccessful.");
+
+            if (mysqli_num_rows($result) > 0) {
+            ?>
       <table class="table">
         <thead class="table-dark">
           <tr>
@@ -52,37 +60,39 @@ if ($_SESSION["login"] == true) {
             <th scope="col">Name</th>
             <th scope="col">Email</th>
             <th scope="col">Phone</th>
-            <th scope="col">Gender</th>
+            <th scope="col">Address</th>
+            <th scope="col">City</th>
             <th scope="col">Date of birth</th>
+            <th scope="col">Reg Date</th>
+            <th scope="col">Action</th>
           </tr>
         </thead>
         <tbody>
+        <?php
+        while ($row = mysqli_fetch_assoc($result)) {
+        ?>
           <tr>
-            <th scope="row">1</th>
-            <td>Tejas Gund</td>
-            <td>tejasgund02@gmail.com</td>
-            <td>9561409792</td>
-            <td>Male</td>
-            <td>20/07/2001</td>
+            <th scope="row"><?php echo $row['uid']; ?></th>
+            <td><?php echo $row['fullname']; ?></td>
+            <td><?php echo $row['email']; ?></td>
+            <td><?php echo $row['contactno']; ?></td>
+            <td><?php echo $row['address']; ?></td>
+            <td><?php echo $row['city']; ?></td>
+            <td><?php echo $row['dob']; ?></td>
+            <td><?php echo $row['regdate']; ?></td>
+
+            <td>
+            <a href='delete_client.php?id=<?php echo $row['uid']; ?> '><i class='fa fa-close'></i><i class='bi bi-trash'></i></a>
+            </td>
           </tr>
-          <tr>
-          <th scope="row">2</th>
-            <td>Saami Chopra</td>
-            <td>swamiraj9006@gmail.com</td>
-            <td>9561402342</td>
-            <td>Male</td>
-            <td>19/07/2001</td>
-          </tr>
-          <tr>
-          <th scope="row">3</th>
-            <td>Abhi Bhoite</td>
-            <td>Abhi@gmail.com</td>
-            <td>9561409792</td>
-            <td>Male</td>
-            <td>20/12/2000</td>
-          </tr>
+          <?php } ?>
         </tbody>
       </table>
+      <?php } else {
+              echo "<h2>No Record Found</h2>";
+            }
+            mysqli_close($conn);
+            ?>
       <!-- Main Content End -->
     </div>
     <?php
