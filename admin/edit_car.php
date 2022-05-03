@@ -67,14 +67,14 @@ if ($_SESSION["login"] == true) {
             $ac = $_POST['ac'];
             $airbag = $_POST['airbag'];
 
-            $sql = "UPDATE car SET vtitle = '{$vtitle}' WHERE vid = '{$v_id}'";
-            // ,vbrand = '{$vbran}', voverview = '{$voverview}', pdprice = '{$pdprice}', ftype = '{$ftype}', myear = '{$myear}', scapacity = '{$scapacity}', vimg1 = '{$vimg1}',vimg2 = '{$vimg2}',vimg3 = '{$vimg3}',vimg4 = '{$vimg4}',vimg5 = '{$vimg5}',vimg6 = '{$vimg6}' , ac = '{$ac}',  airbag = '{$airbag}'
+            $sql = "UPDATE car SET vtitle = '{$vtitle}' ,vbrand = '{$vbran}', voverview = '{$voverview}', pdprice = '{$pdprice}', ftype = '{$ftype}', myear = '{$myear}', scapacity = '{$scapacity}', vimg1 = '{$vimg1}',vimg2 = '{$vimg2}',vimg3 = '{$vimg3}',vimg4 = '{$vimg4}',vimg5 = '{$vimg5}',vimg6 = '{$vimg6}' , ac = '{$ac}',  airbag = '{$airbag}'  WHERE vid = '{$v_id}'";
+            
             $result = mysqli_query($conn, $sql) or die("Query Unsuccessful.");
-            header("Location: car_info.php");
+            header("Location:car_info.php");
             
             mysqli_close($conn);
         }
-         $sql_1="SELECT * FROM car";
+         $sql_1="SELECT * FROM car ";
          $result_1= mysqli_query($conn, $sql_1) or die("Query Unsuccessful.");
          $row = mysqli_fetch_assoc($result_1);
             ?>
@@ -92,7 +92,7 @@ if ($_SESSION["login"] == true) {
                     </div>
                     <div class=" col-12">
                         <label for="inputAddress" class="form-label">Overview<span style="color:red">*</span></label>
-                        <textarea class="form-control" name="voverview" rows="2" value="<?php echo $row['voverview']; ?>"></textarea>
+                        <textarea class="form-control" name="voverview" rows="2"><?php echo $row['voverview']; ?></textarea>
                     </div>
                     <div class=" col-md-6">
                         <label for="inputCity" class="form-label">Price per day (In rupees)<span style="color:red">*</span></label>
@@ -101,8 +101,8 @@ if ($_SESSION["login"] == true) {
 
                     <label class="col-sm-2 control-label">Select Fuel Type<span style="color:red">*</span></label>
                     <div class="col-sm-1">
-                        <select class="selectpicker" name="fueltype" value="<?php echo $row['fueltype']; ?>">
-                            <option value=""> Select </option>
+                        <select class="selectpicker" name="fueltype">
+                        <?php echo $row['fueltype']; ?>
                             <option value="Petrol">Petrol</option>
                             <option value="Diesel">Diesel</option>
                             <option value="CNG">CNG</option>
@@ -128,40 +128,40 @@ if ($_SESSION["login"] == true) {
                     </div>
                     <div class="form-group">
                         <div class="col-sm-4">
-                            Image 1 <span style="color:red">*</span><input type="file" name="img1" value="<?php echo $row['vimg1']; ?>">
+                            Image 1 <input type="file" name="img1" ><?php echo $row['vimg1']; ?>
                         </div>
                         <div class="col-sm-4">
-                            Image 2<span style="color:red">*</span><input type="file" name="img2" value="<?php echo $row['vimg1']; ?>">
+                            Image 2<input type="file" name="img2"><?php echo $row['vimg2']; ?>
                         </div>
                         <div class="col-sm-4">
-                            Image 3<span style="color:red">*</span><input type="file" name="img3" value="<?php echo $row['vimg1']; ?>">
+                            Image 3<input type="file" name="img3"><?php echo $row['vimg3']; ?>
                         </div>
                     </div>
 
 
                     <div class="form-group">
                         <div class="col-sm-4">
-                            Image 4<span style="color:red">*</span><input type="file" name="img4" value="<?php echo $row['vimg1']; ?>">
+                            Image 4<input type="file" name="img4"><?php echo $row['vimg4']; ?>
                         </div>
                         <div class="col-sm-4">
-                            Image 5<span style="color:red">*</span><input type="file" name="img5" value="<?php echo $row['vimg1']; ?>">
+                            Image 5<input type="file" name="img5"><?php echo $row['vimg5']; ?>
                         </div>
 
                         <div class="col-sm-4">
-                            Image 6<span style="color:red"></span><input type="file" name="img6" value="<?php echo $row['vimg1']; ?>">
+                            Image 6<input type="file" name="img6" ><?php echo $row['vimg6']; ?>
                         </div>
                     </div>
 
                     <div class="col-12">
                         <label class="form-label" for="gridCheck">Speciality</label>
                         <div class="form-check">
-                            <input class="form-check-input" name="ac" type="checkbox" value="1" id="gridCheck" value="<?php echo $row['ac']; ?>">
+                            <input class="form-check-input" name="ac" type="checkbox" value="<?php echo $row['ac']; ?>" id="gridCheck">
                             <label class="form-check-label" for="gridCheck">
                                 Air Condition
                             </label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" name="airbag" value="1" type="checkbox" id="gridCheck" value="<?php echo $row['airbag']; ?>">
+                            <input class="form-check-input" name="airbag" value="<?php echo $row['airbag']; ?>" type="checkbox" id="gridCheck">
                             <label class="form-check-label" for="gridCheck">
                                 Airbag (Safety)
                             </label>
