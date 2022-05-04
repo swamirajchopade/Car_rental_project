@@ -45,7 +45,7 @@ if ($_SESSION["login"] == true) {
             <!-- action="car_operation_insert.php" -->
             <!-- Main content -->
             <div class="container m-1">
-                <form class="row g-3" method="post" action="car_operation_insert.php" >
+                <form class="row g-3" method="post" action="car_operation_insert.php" enctype="multipart/form-data" >
                     <div class="col-md-6">
                         <label for="inputEmail4" class="form-label">Vehicle Title<span style="color:red">*</span></label>
                         <input type="text" class="form-control" name="vtitle" required>
