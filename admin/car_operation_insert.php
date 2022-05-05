@@ -9,12 +9,12 @@ include "config.php";
  $ftype = $_POST['fueltype'];
  $myear = $_POST['myear'];
  $scapacity = $_POST['scapacity'];
- $vimg1 = file_get_contents($_FILES["img1"]["tmp_name"]);
- $vimg2 = file_get_contents($_FILES["img2"]["tmp_name"]);
- $vimg3 = file_get_contents($_FILES["img3"]["tmp_name"]);
- $vimg4 = file_get_contents($_FILES["img4"]["tmp_name"]);
- $vimg5 = file_get_contents($_FILES["img5"]["tmp_name"]);
- $vimg6 = file_get_contents($_FILES["img6"]["tmp_name"]);
+ $vimg1 = basename($_FILES["img1"]["tmp_name"]);
+ $vimg2 = basename($_FILES["img2"]["tmp_name"]);
+ $vimg3 = basename($_FILES["img3"]["tmp_name"]);
+ $vimg4 = basename($_FILES["img4"]["tmp_name"]);
+ $vimg5 = basename($_FILES["img5"]["tmp_name"]);
+ $vimg6 = basename($_FILES["img6"]["tmp_name"]);
  $ac = $_POST['ac'];
  $airbag = $_POST['airbag'];
 
