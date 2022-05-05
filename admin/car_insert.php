@@ -97,23 +97,18 @@ if ($_SESSION["login"] == true) {
                         <div class="col-sm-4">
                             Image 2<span style="color:red">*</span><input type="file" name="img2" required>
                         </div>
-                        <div class="col-sm-4">
-                            Image 3<span style="color:red">*</span><input type="file" name="img3" required>
-                        </div>
+                       
                     </div>
 
 
                     <div class="form-group">
+                    <div class="col-sm-4">
+                            Image 3<span style="color:red">*</span><input type="file" name="img3" required>
+                        </div>
                         <div class="col-sm-4">
                             Image 4<span style="color:red">*</span><input type="file" name="img4" required>
                         </div>
-                        <div class="col-sm-4">
-                            Image 5<span style="color:red">*</span><input type="file" name="img5" required>
-                        </div>
-
-                        <div class="col-sm-4">
-                            Image 6<span style="color:red"></span><input type="file" name="img6">
-                        </div>
+                    
                     </div>
 
                     <div class="col-12">
@@ -127,7 +122,7 @@ if ($_SESSION["login"] == true) {
                         </div>
                         <div class="form-check">
                             <input class="form-check-input" name="airbag" type="checkbox" value="1" id="gridCheck">
-                            <input class="form-check-input" name="ac" type="hidden" value="0" id="gridCheck">
+                            <input class="form-check-input" name="airbag" type="hidden" value="0" id="gridCheck">
                             <label class="form-check-label" for="gridCheck">
                                 Airbag (Safety)
                             </label>

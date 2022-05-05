@@ -79,3 +79,70 @@
 
 
                           DELETE FROM `car` WHERE `car`.`vid` = 30
+
+
+
+                        <div class="form-group">
+                        <div class="col-sm-12">
+                            <h4><b>Images</b></h4>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <div class="col-sm-4">
+                            <?php echo "<img src='data:image/jpeg;base64," . base64_encode($row['vimg1']) . "' height=50px>"; ?>
+                            <br>
+                            Image 1 
+
+                        </div>
+                        <div class="col-sm-4">
+                            <?php echo "<img src='data:image/jpeg;base64," . base64_encode($row['vimg2']) . "' height=50px>"; ?>
+                            <br>
+                            Image 2
+                        </div>
+
+                    </div>
+                    
+                    <div class="form-group">
+                        <div class="col-sm-4">
+                            <?php echo "<img src='data:image/jpeg;base64," . base64_encode($row['vimg3']) . "' height=50px>"; ?>
+                            <br>
+                            Image 3
+                        </div>
+
+
+                        <div class="col-sm-4">
+                            <?php echo "<img src='data:image/jpeg;base64," . base64_encode($row['vimg4']) . "' height=50px>"; ?>
+                            <br>
+                            Image 4
+                        </div>
+
+                    </div>
+
+
+                     $vimg1 = $_FILES['img1']['tmp_name'];
+                $imgContent1 = basename($vimg1);
+                $vimg2 = $_FILES['img2']['tmp_name'];
+                $imgContent2 = basename($vimg2);
+                $vimg3 = $_FILES['img3']['tmp_name'];
+                $imgContent3 = basename($vimg3);
+                $vimg4 = $_FILES['img4']['tmp_name'];
+                $imgContent4 = basename($vimg4);
+                $vimg5 = $_FILES['img5']['tmp_name'];
+                $imgContent5 = basename($vimg5);
+                $vimg6 = $_FILES['img6']['tmp_name'];
+                $imgContent6 = basename($vimg6);
+
+
+                <?php //} else { ?>
+                                <!-- <input class="form-check-input" name="ac" type="checkbox" id="gridCheck" value="<?php //echo $row['ac']; ?>">
+                                <input class="form-check-input" name="ac" type="hidden" id="gridCheck" value="1" > -->
+                            <?php //} ?>
+
+                             <?php //} else { ?>
+                                <!-- <input class="form-check-input" name="airbag" type="checkbox" id="gridCheck" value="<?php //echo $row['airbag']; ?>">
+                                <input class="form-check-input" name="airbag" type="hidden" id="gridCheck" value="1" > -->
+                            <?php //} ?>
+
+                              <?php //if ($row['airbag'] == 1) { 
+                                ?>

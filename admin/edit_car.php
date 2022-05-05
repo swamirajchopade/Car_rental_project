@@ -59,27 +59,14 @@ if ($_SESSION["login"] == true) {
                 $myear = $_POST['myear'];
                 $scapacity = $_POST['scapacity'];
 
-                $vimg1 = $_FILES['img1']['tmp_name'];
-                $imgContent1 = basename($vimg1);
-                $vimg2 = $_FILES['img2']['tmp_name'];
-                $imgContent2 = basename($vimg2);
-                $vimg3 = $_FILES['img3']['tmp_name'];
-                $imgContent3 = basename($vimg3);
-                $vimg4 = $_FILES['img4']['tmp_name'];
-                $imgContent4 = basename($vimg4);
-                $vimg5 = $_FILES['img5']['tmp_name'];
-                $imgContent5 = basename($vimg5);
-                $vimg6 = $_FILES['img6']['tmp_name'];
-                $imgContent6 = basename($vimg6);
-
                 $ac = $_POST['ac'];
                 $airbag = $_POST['airbag'];
-                $sql = "UPDATE car SET vtitle = '{$vtitle}' ,vbrand = '{$vbran}', voverview = '{$voverview}', pdprice = '{$pdprice}', ftype = '{$ftype}', myear = '{$myear}', scapacity = '{$scapacity}',vimg1 = '{$imgContent1}',vimg2 = '{$imgContent2}',vimg3 = '{$imgContent3}',vimg4 = '{$imgContent4}',vimg5 = '{$imgContent5}',vimg6 = '{$imgContent6}' , ac = '{$ac}' , airbag = '{$airbag}'  WHERE car.vid = '{$v_id}'";
+                $sql = "UPDATE car SET vtitle = '{$vtitle}' ,vbrand = '{$vbran}', voverview = '{$voverview}', pdprice = '{$pdprice}', ftype = '{$ftype}', myear = '{$myear}', scapacity = '{$scapacity}',ac = '{$ac}' , airbag = '{$airbag}'  WHERE car.vid = '{$v_id}'";
 
                 $result = mysqli_query($conn, $sql) or die("Query Unsuccessful.");
-                header("Location:car_info.php");
+                // header("Location:car_info.php");
 
-                mysqli_close($conn);
+
             }
             ?>
 
@@ -132,85 +119,42 @@ if ($_SESSION["login"] == true) {
                     <div class="hr-dashed"></div>
 
 
-                    <div class="form-group">
-                        <div class="col-sm-12">
-                            <h4><b>Upload Images</b></h4>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <div class="col-sm-4">
-                            <?php echo "<img src='data:image/jpeg;base64," . base64_encode($row['vimg1']) . "' height=50px>"; ?>
-                            <br>
-                            Image 1 <input type="file" name="img1" value="<?php echo "<img src='data:image/jpeg;base64," . base64_encode($row['vimg1']) . "' height=50px>"; ?>">
-
-                        </div>
-                        <div class="col-sm-4">
-                            <?php echo "<img src='data:image/jpeg;base64," . base64_encode($row['vimg2']) . "' height=50px>"; ?>
-                            <br>
-                            Image 2 <input type="file" name="img2" value="<?php echo "<img src='data:image/jpeg;base64," . base64_encode($row['vimg2']) . "' height=50px>"; ?>">
-                        </div>
-                        <div class="col-sm-4">
-                            <?php echo "<img src='data:image/jpeg;base64," . base64_encode($row['vimg3']) . "' height=50px>"; ?>
-                            <br>
-                            Image 3 <input type="file" name="img3" value="<?php echo "<img src='data:image/jpeg;base64," . base64_encode($row['vimg3']) . "' height=145px>"; ?>">
-                        </div>
-                    </div>
-
-
-                    <div class="form-group">
-                        <div class="col-sm-4">
-                            <?php echo "<img src='data:image/jpeg;base64," . base64_encode($row['vimg4']) . "' height=50px>"; ?>
-                            <br>
-                            Image 4 <input type="file" name="img4" value="<?php echo "<img src='data:image/jpeg;base64," . base64_encode($row['vimg4']) . "' height=50px>"; ?>">
-                        </div>
-                        <div class="col-sm-4">
-                            <?php echo "<img src='data:image/jpeg;base64," . base64_encode($row['vimg5']) . "' height=50px>"; ?>
-                            <br>
-                            Image 5 <input type="file" name="img5" value="<?php echo "<img src='data:image/jpeg;base64," . base64_encode($row['vimg5']) . "' height=50px>"; ?>">
-                        </div>
-
-                        <div class="col-sm-4">
-                            <?php echo "<img src='data:image/jpeg;base64," . base64_encode($row['vimg6']) . "' height=50px>"; ?>
-                            <br>
-                            Image 6 <input type="file" name="img6" value="<?php echo "<img src='data:image/jpeg;base64," . base64_encode($row['vimg6']) . "' height=50px>"; ?>">
-                        </div>
-                    </div>
+                   
 
                     <div class="col-12">
                         <label class="form-label" for="gridCheck">Speciality</label>
                         <div class="form-check">
-                        <?php if ($row['ac'] == 1) { ?>
-                            <input class="form-check-input" name="ac" type="checkbox" id="gridCheck" value="<?php echo $row['ac']; ?>"checked>
-                        <?php } else { ?>
-                            <input class="form-check-input" name="ac" type="checkbox" id="gridCheck" value="<?php echo $row['ac']; ?>">
-                        <?php } ?>
-                        <label class="form-check-label" for="gridCheck">
-                            Air Condition
-                        </label>
+                            <?php //if ($row['ac'] == 1) { ?>
+                                <?php //echo $row['ac']; ?>
+                                <input class="form-check-input" name="ac" type="checkbox" id="gridCheck" value="1">
+                                <input class="form-check-input" name="ac" type="hidden" id="gridCheck" value="0" >
+                            
+                            <label class="form-check-label" for="gridCheck">
+                                Air Condition
+                            </label>
+                        </div>
+                        <div class="form-check">
+                        <!-- <?php //echo $row['airbag']; ?> -->
+                                <input class="form-check-input" name="airbag" type="checkbox" id="gridCheck" value="1" >
+                                <input class="form-check-input" name="airbag" type="hidden" id="gridCheck" value="0" >
+                           
+                            <label class="form-check-label" for="gridCheck">
+                                Airbag (Safety)
+                            </label>
+                        </div>
+
                     </div>
-                    <div class="form-check">
-                        <?php if ($row['airbag'] == 1) { ?>
-                            <input class="form-check-input" name="airbag" type="checkbox" id="gridCheck" value="<?php echo $row['airbag']; ?>" checked>
-                        <?php } else { ?>
-                            <input class="form-check-input" name="airbag" type="checkbox" id="gridCheck" value="<?php echo $row['airbag']; ?>">
-                        <?php } ?>
-                        <label class="form-check-label" for="gridCheck">
-                            Airbag (Safety)
-                        </label>
+                    <div class="col-12">
+                        <a href="car_info.php"> <button type="submit" class="btn btn-primary">Update </button></a>
                     </div>
+                </form>
 
             </div>
-            <div class="col-12">
-                <button type="submit" class="btn btn-primary">Update</button>
-            </div>
-            </form>
-
+            <!-- Main Content End -->
         </div>
-        <!-- Main Content End -->
-    </div>
-    <?php
-    include "footer.php";
-    ?>
+        <?php
+        include "footer.php";
+        ?>
     </div>
 </body>
 
