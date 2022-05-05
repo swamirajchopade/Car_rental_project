@@ -15,7 +15,7 @@ if ($_SESSION["login"] == true) {
 
 <head>
     <?php
-    include "header.php";
+    include "head.php";
     ?>
 </head>
 
