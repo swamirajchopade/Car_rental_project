@@ -120,12 +120,14 @@ if ($_SESSION["login"] == true) {
                         <label class="form-label" for="gridCheck">Speciality</label>
                         <div class="form-check">
                             <input class="form-check-input" name="ac" type="checkbox" value="1" id="gridCheck">
+                            <input class="form-check-input" name="ac" type="hidden" value="0" id="gridCheck">
                             <label class="form-check-label" for="gridCheck">
                                 Air Condition
                             </label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" name="airbag" value="1" type="checkbox" id="gridCheck">
+                            <input class="form-check-input" name="airbag" type="checkbox" value="1" id="gridCheck">
+                            <input class="form-check-input" name="ac" type="hidden" value="0" id="gridCheck">
                             <label class="form-check-label" for="gridCheck">
                                 Airbag (Safety)
                             </label>

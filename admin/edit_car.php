@@ -60,17 +60,17 @@ if ($_SESSION["login"] == true) {
                 $scapacity = $_POST['scapacity'];
 
                 $vimg1 = $_FILES['img1']['tmp_name'];
-                $imgContent1 = file_get_contents($vimg1);
+                $imgContent1 = basename($vimg1);
                 $vimg2 = $_FILES['img2']['tmp_name'];
-                $imgContent2 = file_get_contents($vimg2);
+                $imgContent2 = basename($vimg2);
                 $vimg3 = $_FILES['img3']['tmp_name'];
-                $imgContent3 = file_get_contents($vimg3);
+                $imgContent3 = basename($vimg3);
                 $vimg4 = $_FILES['img4']['tmp_name'];
-                $imgContent4 = file_get_contents($vimg4);
+                $imgContent4 = basename($vimg4);
                 $vimg5 = $_FILES['img5']['tmp_name'];
-                $imgContent5 = file_get_contents($vimg5);
+                $imgContent5 = basename($vimg5);
                 $vimg6 = $_FILES['img6']['tmp_name'];
-                $imgContent6 = file_get_contents($vimg6);
+                $imgContent6 = basename($vimg6);
 
                 $ac = $_POST['ac'];
                 $airbag = $_POST['airbag'];
