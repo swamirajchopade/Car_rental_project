@@ -12,7 +12,7 @@ include "config.php";
 
 <head>
   <?php
-  include "header.php";
+  include "head.php";
   ?>
 </head>
 
