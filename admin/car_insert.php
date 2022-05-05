@@ -1,13 +1,41 @@
 <?php
 session_start();
 include "config.php";
-
 if ($_SESSION["login"] == true) {
     
 } else {
     header("Location:index.php");
+    exit;
 }
 
+if(isset($_POST['sub'])){
+  include "config.php";
+  $vtitle = $_POST['vtitle'];
+  $vbran = $_POST['vbrand'];
+  $voverview = $_POST['voverview'];
+  $pdprice = $_POST['pdprice'];
+  $ftype = $_POST['fueltype'];
+  $myear = $_POST['myear'];
+  $scapacity = $_POST['scapacity'];
+  $vimg1 = basename($_FILES["img1"]["tmp_name"]);
+  $vimg2 = basename($_FILES["img2"]["tmp_name"]);
+  $vimg3 = basename($_FILES["img3"]["tmp_name"]);
+  $vimg4 = basename($_FILES["img4"]["tmp_name"]);
+
+  $ac = $_POST['ac'];
+  $airbag = $_POST['airbag'];
+ 
+  $query = "INSERT INTO car (vtitle,vbrand,voverview,pdprice,ftype,myear,scapacity,vimg1,vimg2,vimg3,vimg4,ac,airbag) VALUES ('$vtitle','$vbran','$voverview','$pdprice','$ftype','$myear','$scapacity','$vimg1','$vimg2','$vimg3','$vimg4','$ac','$airbag')";
+ 
+ 
+  $result = mysqli_query($conn, $query) or die("Query Unsuccessful.");
+ 
+      header("Location:car_info.php");
+     
+ 
+  mysqli_close($conn);
+
+}
 ?>
 
 
@@ -16,7 +44,7 @@ if ($_SESSION["login"] == true) {
 
 <head>
     <?php
-    include "header.php";
+    include_once "head.php";
     ?>
 </head>
 
@@ -44,8 +72,9 @@ if ($_SESSION["login"] == true) {
             <!-- /.content-header -->
             <!-- action="car_operation_insert.php" -->
             <!-- Main content -->
+           
             <div class="container m-1">
-                <form class="row g-3" method="post" action="car_operation_insert.php" enctype="multipart/form-data" >
+                <form class="row g-3" method="post" action="<?php echo $_SERVER['PHP_SELF'] ?>" enctype="multipart/form-data" >
                     <div class="col-md-6">
                         <label for="inputEmail4" class="form-label">Vehicle Title<span style="color:red">*</span></label>
                         <input type="text" class="form-control" name="vtitle" required>
@@ -129,11 +158,12 @@ if ($_SESSION["login"] == true) {
                         </div>
                     </div>
                     <div class="col-12">
-                        <button type="submit" class="btn btn-primary">Insert</button>
+                        <button type="submit" class="btn btn-primary" name="sub">Insert</button>
                     </div>
                 </form>
             </div>
-            <!-- Main Content End -->
+            <!-- main Content End -->
+           
         </div>
         <?php
         include "footer.php";
