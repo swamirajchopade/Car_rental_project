@@ -117,20 +117,20 @@ if ($_SESSION["login"] == true) {
                     </div>
                     <div class="form-group">
                         <div class="col-sm-4">
-                            Driving lic. <span style="color:red">*</span><input type="file" name="dimg1" required>
+                            Driving lic. <span style="color:red">*</span><input type="file" name="img1" required>
                         </div>
                         <div class="col-sm-4">
-                            Aaddhar card<span style="color:red">*</span><input type="file" name="dimg2" required>
+                            Aaddhar card<span style="color:red">*</span><input type="file" name="img2" required>
                         </div>
                     </div>
                     <div class="form-group">
                         <div class="col-sm-4">
-                            Driver photo<span style="color:red">*</span><input type="file" name="dimg3" required>
+                            Driver photo<span style="color:red">*</span><input type="file" name="img3" required>
                         </div>
 
 
                         <div class="col-sm-4">
-                            Bank passbook<span style="color:red">*</span><input type="file" name="dimg4" required>
+                            Bank passbook<span style="color:red">*</span><input type="file" name="img4" required>
                         </div>
 
                     </div>
