@@ -1,9 +1,34 @@
+
 <?php
 session_start();
 if ($_SESSION["login"] == true) {
 } else {
    header("Location:index.php");
 }
+include "config.php";
+
+
+ $sql1="SELECT count(vid) as count from car";
+ $sql2="SELECT count(did) as count from tbldriver";
+ $sql3="SELECT count(uid) as count from tbluser";
+ $sql4="SELECT count(bid) as count from booking";
+$result = mysqli_query($conn, $sql1) or die("Query Unsuccessful.");
+$result1 = mysqli_query($conn, $sql2) or die("Query Unsuccessful.");
+$result2 = mysqli_query($conn, $sql3) or die("Query Unsuccessful.");
+$result3 = mysqli_query($conn, $sql4) or die("Query Unsuccessful.");
+$row=mysqli_fetch_array($result);
+$row1=mysqli_fetch_array($result1);
+$row2=mysqli_fetch_array($result2);
+$row3=mysqli_fetch_array($result3);
+$total=$row[0];
+$total1=$row1[0];
+$total2=$row2[0];
+$total3=$row3[0];
+
+$pert=($total3/$total2)*100;
+
+
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -48,7 +73,7 @@ if ($_SESSION["login"] == true) {
               <!-- small box -->
               <div class="small-box bg-info">
                 <div class="inner">
-                  <h3>150</h3>
+                  <h3><?php echo $total; ?></h3>
 
                   <p>Car Count</p>
                 </div>
@@ -63,7 +88,7 @@ if ($_SESSION["login"] == true) {
               <!-- small box -->
               <div class="small-box bg-success">
                 <div class="inner">
-                  <h3>53<sup style="font-size: 20px">%</sup></h3>
+                  <h3><?php echo $pert;?><sup style="font-size: 20px">%</sup></h3>
 
                   <p>Booking Rate</p>
                 </div>
@@ -78,7 +103,7 @@ if ($_SESSION["login"] == true) {
               <!-- small box -->
               <div class="small-box bg-warning">
                 <div class="inner">
-                  <h3>44</h3>
+                  <h3><?php echo $total2; ?></h3>
 
                   <p>User Registrations</p>
                 </div>
@@ -93,7 +118,7 @@ if ($_SESSION["login"] == true) {
               <!-- small box -->
               <div class="small-box bg-danger">
                 <div class="inner">
-                  <h3>65</h3>
+                  <h3><?php echo $total2; ?></h3>
 
                   <p>Driver</p>
                 </div>
