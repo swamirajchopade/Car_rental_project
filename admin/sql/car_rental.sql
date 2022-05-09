@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 08, 2022 at 02:42 PM
+-- Generation Time: May 09, 2022 at 03:58 AM
 -- Server version: 10.4.21-MariaDB
 -- PHP Version: 8.0.12
 
@@ -54,8 +54,8 @@ CREATE TABLE `booking` (
   `uid` int(11) DEFAULT NULL,
   `uemail` varchar(100) DEFAULT NULL,
   `uname` varchar(100) DEFAULT NULL,
-  `fromdate` varchar(50) DEFAULT NULL,
-  `todate` varchar(50) DEFAULT NULL,
+  `fromdate` date DEFAULT NULL,
+  `todate` date DEFAULT NULL,
   `destination` varchar(200) DEFAULT NULL,
   `pid` int(11) DEFAULT NULL,
   `status` int(11) DEFAULT NULL,
@@ -67,7 +67,7 @@ CREATE TABLE `booking` (
 --
 
 INSERT INTO `booking` (`bid`, `vid`, `vname`, `uid`, `uemail`, `uname`, `fromdate`, `todate`, `destination`, `pid`, `status`, `bregdate`) VALUES
-(1, 2, 'werwser', 3, 'sedfsedf', 'asdfsdf', 'sdfsdf', 'asdfsdf', '2', 2, NULL, '2022-05-08 12:34:08');
+(1, 2, 'werwser', 3, 'sedfsedf', 'asdfsdf', '0000-00-00', '0000-00-00', '2', 2, NULL, '2022-05-08 12:34:08');
 
 -- --------------------------------------------------------
 
