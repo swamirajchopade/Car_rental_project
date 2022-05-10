@@ -9,7 +9,7 @@ if ($_SESSION["login"] == true) {
 }
 
 if(isset($_POST['sub'])){
-  include "config.php";
+  //include "config.php";
   $vtitle = $_POST['vtitle'];
   $vbran = $_POST['vbrand'];
   $voverview = $_POST['voverview'];
@@ -17,18 +17,17 @@ if(isset($_POST['sub'])){
   $ftype = $_POST['fueltype'];
   $myear = $_POST['myear'];
   $scapacity = $_POST['scapacity'];
-  $vimg1 = basename($_FILES["img1"]["tmp_name"]);
-  $vimg2 = basename($_FILES["img2"]["tmp_name"]);
-  $vimg3 = basename($_FILES["img3"]["tmp_name"]);
-  $vimg4 = basename($_FILES["img4"]["tmp_name"]);
+  $vimg1 = addslashes(file_get_contents($_FILES["img1"]["tmp_name"]));
+  $vimg2 = addslashes(file_get_contents($_FILES["img2"]["tmp_name"]));
+  $vimg3 = addslashes(file_get_contents($_FILES["img3"]["tmp_name"]));
+  $vimg4 = addslashes(file_get_contents($_FILES["img4"]["tmp_name"]));
 
   $ac = $_POST['ac'];
   $airbag = $_POST['airbag'];
  
   $query = "INSERT INTO car (vtitle,vbrand,voverview,pdprice,ftype,myear,scapacity,vimg1,vimg2,vimg3,vimg4,ac,airbag) VALUES ('$vtitle','$vbran','$voverview','$pdprice','$ftype','$myear','$scapacity','$vimg1','$vimg2','$vimg3','$vimg4','$ac','$airbag')";
  
- 
-  $result = mysqli_query($conn, $query) or die("Query Unsuccessful.");
+  $result = mysqli_query($conn, $query) or die("Error".mysqli_error($conn));
  
       header("Location:car_info.php");
      
