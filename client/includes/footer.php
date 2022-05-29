@@ -13,7 +13,7 @@
             <li><a href="page.php?type=faqs">FAQs</a></li>
             <li><a href="page.php?type=privacy">Privacy</a></li>
           <li><a href="page.php?type=terms">Terms of use</a></li>
-               <li><a href="admin/">Admin Login</a></li>
+               <li><a href="/../Car_rental_project/admin">Admin Login</a></li>
           </ul>
         </div>
   
@@ -39,10 +39,11 @@
           <div class="footer_widget">
             <p>Connect with Us:</p>
             <ul>
-              <li><a href="https://www.facebook.com/tejas.gund.1"><i class="fa fa-facebook-square" aria-hidden="true"></i></a></li>
-              <li><a href="https://twitter.com/Tejasgund02"><i class="fa fa-twitter-square" aria-hidden="true"></i></a></li>
-              <li><a href="https://www.linkedin.com/in/tejas-gund-b3445619a/"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a></li>
-              <li><a href="https://www.instagram.com/abhishek.bhoite/"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+              <li><a href="#"><i class="fa fa-facebook-square" aria-hidden="true"></i></a></li>
+              <li><a href="#"><i class="fa fa-twitter-square" aria-hidden="true"></i></a></li>
+              <li><a href="#"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a></li>
+              <li><a href="#"><i class="fa fa-google-plus-square" aria-hidden="true"></i></a></li>
+              <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
             </ul>
           </div>
         </div>
