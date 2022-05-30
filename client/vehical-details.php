@@ -11,6 +11,26 @@ $useremail=$_SESSION['login'];
 $status=0;
 $vhid=$_GET['vid'];
 $bookingno=mt_rand(100000000, 999999999);
+$sql1 = "SELECT vtitle FROM car WHERE vid=:vid";
+$q2 = $dbh -> prepare($sql1);
+$q2->bindParam(':vid',$vhid, PDO::PARAM_STR);
+$q2->execute();
+$vnamer=$q2->fetchAll(PDO::FETCH_OBJ);
+
+foreach($vnamer as $vnr){
+$vname=$vnr->vtitle;
+}
+
+$sql2 = "SELECT fullname FROM tbluser WHERE email=:email";
+$q3 = $dbh -> prepare($sql2);
+$q3->bindParam(':email',$useremail, PDO::PARAM_STR);
+$q3->execute();
+$unamer=$q3->fetchAll(PDO::FETCH_OBJ);
+
+foreach($unamer as $unr){
+$uname=$unr->fullname;
+}
+
 $ret="SELECT * FROM booking where (:fromdate BETWEEN date(fromdate) and date(todate) || :todate BETWEEN date(fromdate) and date(todate) || date(fromdate) BETWEEN :fromdate and :todate) and vid=:vhid";
 $query1 = $dbh -> prepare($ret);
 $query1->bindParam(':vhid',$vhid, PDO::PARAM_STR);
@@ -22,10 +42,12 @@ $results1=$query1->fetchAll(PDO::FETCH_OBJ);
 if($query1->rowCount()==0)
 {
 
-$sql="INSERT INTO  booking (uemail,vid,fromdate,todate,destination,status) VALUES(:useremail,:vhid,:fromdate,:todate,:message,:status)";
+$sql="INSERT INTO  booking (uemail,vname,vid,uname,fromdate,todate,destination,status) VALUES(:useremail,:vname,:vhid,:uname,:fromdate,:todate,:message,:status)";
 $query = $dbh->prepare($sql);
 $query->bindParam(':useremail',$useremail,PDO::PARAM_STR);
 $query->bindParam(':vhid',$vhid,PDO::PARAM_STR);
+$query->bindParam(':vname',$vname,PDO::PARAM_STR);
+$query->bindParam(':uname',$uname,PDO::PARAM_STR);
 $query->bindParam(':fromdate',$fromdate,PDO::PARAM_STR);
 $query->bindParam(':todate',$todate,PDO::PARAM_STR);
 $query->bindParam(':message',$message,PDO::PARAM_STR);
