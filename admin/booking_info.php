@@ -44,74 +44,57 @@ if ($_SESSION["login"] == true) {
       <!-- /.content-header -->
 
       <!-- Main content -->
+
+      <?php
+          include 'config.php';
+
+          $sql = "SELECT * FROM booking";
+          $result = mysqli_query($conn, $sql) or die("Query Unsuccessful.");
+
+          if(mysqli_num_rows($result) > 0)  {
+          ?>
       <table class="table">
         <thead class="table-dark">
           <tr>
             <th scope="col">Bid</th>
-            <th scope="col">Vid</th>
             <th scope="col">Vehicle</th>
-            <th scope="col">Uid</th>
-            <th scope="col">email</th>
-            <th scope="col">UName</th>
+            <th scope="col">Email</th>
+            <th scope="col">User Name</th>
             <th scope="col">From Date</th>
             <th scope="col">To Date</th>
             <th scope="col">Destination</th>
-            <th scope="col">Pid</th>
+            <th scope="col">Status</th>
             <th scope="col">Action</th>
           </tr>
         </thead>
         <tbody>
+              
+        <?php
+            while($row = mysqli_fetch_assoc($result)){
+          ?>
           <tr>
-            <th scope="row">1</th>
-            <th scope="col">2</th>
-            <td>Innova</td>
-            <th scope="col">2</th>
-            <td>sanketnalage@gmail.com</td>
-            <td>sanket nalage</td>
-            <td>30/02/2023</td>
-            <td>04/03/2022</td>
-            <td>Tirupati Balaji</td>
-            <th scope="row">1</th>
-
-            <!-- <td>#</td> -->
-            <td><a href="edit-vehicle.php?id=1"><i class="fa fa-edit"></i></a>&nbsp;&nbsp;
-              <a href="manage-vehicles.php?del=1" onclick="return confirm('Do you want to delete');"><i class="fa fa-close"></i><i class='bi bi-trash'></i></a>
+            <th scope="row"><?php echo $row['bid']; ?></th>
+            <td><?php echo $row['vname']; ?></td>
+            <td><?php echo $row['uemail']; ?></td>
+            <td><?php echo $row['uname']; ?></td>
+            <td><?php echo $row['fromdate']; ?></td>
+            <td><?php echo $row['todate']; ?></td>
+            <td><?php echo $row['destination']; ?></td>
+            <td><?php echo $row['status']; ?></td>
+            <td>&nbsp;&nbsp;
+              <a href='delete_booking.php?id=<?php echo $row['bid']; ?>'><i class='fa fa-close'></i><i class='bi bi-trash'></i></a>
             </td>
           </tr>
-          <tr>
-            <th scope="row">1</th>
-            <th scope="col">2</th>
-            <td>Innova</td>
-            <th scope="col">2</th>
-            <td>sanketnalage@gmail.com</td>
-            <td>sanket nalage</td>
-            <td>30/02/2023</td>
-            <td>04/03/2022</td>
-            <td>Tirupati Balaji</td>
-            <th scope="row">1</th>
-            <!-- <td>#</td> -->
-            <td><a href="edit-vehicle.php?id=1"><i class="fa fa-edit"></i></a>&nbsp;&nbsp;
-              <a href="manage-vehicles.php?del=1" onclick="return confirm('Do you want to delete');"><i class="fa fa-close"></i><i class='bi bi-trash'></i></a>
-            </td>
-          </tr>
-          <tr>
-            <th scope="row">1</th>
-            <th scope="col">2</th>
-            <td>Innova</td>
-            <th scope="col">2</th>
-            <td>sanketnalage@gmail.com</td>
-            <td>sanket nalage</td>
-            <td>30/02/2023</td>
-            <td>04/03/2022</td>
-            <td>Tirupati Balaji</td>
-            <th scope="row">1</th>
-            <!-- <td>#</td> -->
-            <td><a href="edit-vehicle.php?id=1"><i class="fa fa-edit"></i></a>&nbsp;&nbsp;
-              <a href="manage-vehicles.php?del=1" onclick="return confirm('Do you want to delete');"><i class="fa fa-close"></i><i class='bi bi-trash'></i></a>
-            </td>
-          </tr>
+          <?php } ?>
+          
         </tbody>
       </table>
+      <?php }
+        else{
+          echo "<h2>No Record Found</h2>";
+            }
+        mysqli_close($conn);
+      ?>
       <!-- Main Content End -->
     </div>
     <?php
