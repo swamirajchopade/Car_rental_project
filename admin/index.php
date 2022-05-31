@@ -1,7 +1,7 @@
 <?PHP
 session_start();
 include('config.php');
-if (isset($_POST['login'])) {
+if (isset($_POST['alogin'])) {
     $email = $_POST['username'];
     $password = $_POST['password'];
 
@@ -16,7 +16,7 @@ if (isset($_POST['login'])) {
     }
 }
 if (isset($_SESSION["username"])) {
-    $_SESSION["login"]=true;
+    $_SESSION["alogin"]=true;
     header("Location:index1.php");
 
 }
@@ -85,7 +85,7 @@ if (isset($_SESSION["username"])) {
 
                         <!-- /.col -->
                         <div class="col-12">
-                            <button type="submit" name="login" class="btn btn-primary btn-block ">Sign In</button>
+                            <button type="submit" name="alogin" class="btn btn-primary btn-block ">Sign In</button>
                         </div>
                         <!-- /.col -->
                     </div>

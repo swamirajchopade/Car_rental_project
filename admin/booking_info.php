@@ -1,6 +1,6 @@
 <?php
 session_start();
-if ($_SESSION["login"] == true) {
+if ($_SESSION["alogin"] == true) {
 } else {
   header("Location:index.php");
 }
@@ -82,6 +82,7 @@ if ($_SESSION["login"] == true) {
             <td><?php echo $row['destination']; ?></td>
             <td><?php echo $row['status']; ?></td>
             <td>&nbsp;&nbsp;
+            <a href='UpdateCheck.php?id=<?php echo $row['bid']; ?>'><i class='fa fa-edit'></i></a>
               <a href='delete_booking.php?id=<?php echo $row['bid']; ?>'><i class='fa fa-close'></i><i class='bi bi-trash'></i></a>
             </td>
           </tr>
