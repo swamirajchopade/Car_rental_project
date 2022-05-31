@@ -63,7 +63,7 @@
         <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
           <span class="dropdown-item dropdown-header">Admin Profile</span>
           <div class="dropdown-divider"></div>
-          <a href="#" class="dropdown-item">
+          <a href="admin_edit.php" class="dropdown-item">
           <i class="fa fa-pen mr-2"></i> Edit
           </a>
           <div class="dropdown-divider"></div>

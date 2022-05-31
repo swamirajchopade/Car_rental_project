@@ -1,7 +1,7 @@
 <?php
 session_start();
 include "config.php";
-if ($_SESSION["login"] == true) {
+if ($_SESSION["alogin"] == true) {
     
 } else {
     header("Location:index.php");
