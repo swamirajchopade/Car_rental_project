@@ -150,7 +150,7 @@ $_SESSION['brndid']=$result->vbrand;
       </div>
       <div class="col-md-3">
         <div class="price_info">
-          <p>$<?php echo htmlentities($result->pdprice);?> </p>Per Day
+          <p>₹<?php echo htmlentities($result->pdprice);?> </p>Per Day
          
         </div>
       </div>
