@@ -43,69 +43,34 @@ error_reporting(0);
     <?php include('includes/header.php');?>
     <!-- /Header -->
 
-    <!--Testimonial -->
-<section class="section-padding testimonial-section parallex-bg">
-  <div class="container div_zindex">
-    <div class="section-header white-text text-center">
-      <h2 style="color: black;">We Give the <span>Services Best Customers</span></h2>
-    </div>
-    <div class="row">
-      <div id="testimonial-slider">
+    <section class="page-header aboutus_page">
+  <div class="container">
+    <div class="page-header_wrap">
+      <div class="page-heading">
+        <h1>About Us</h1>
       </div>
+      <ul class="coustom-breadcrumb">
+        <li><a href="index.php">Home</a></li>
+        <li></li>
+      </ul>
+    </div>
+  </div>
+  <!-- Dark Overlay-->
+  <div class="dark-overlay"></div>
+</section>
+<section class="about_us section-padding">
+  <div class="container">
+    <div class="section-header text-center">
+
+
+      <h2>We reimagine the way the world moves for the better</h2>
+      <p> Movement is what we power. It’s our lifeblood. It runs through our veins. It’s what gets us out of bed each morning. It pushes us to constantly reimagine how we can move better. For you. For all the places you want to go. For all the things you want to get. For all the ways you want to earn. Across the entire world. In real time. At the incredible speed of now.</p>
     </div>
   </div>
 </section>
-
-    <section class="section-padding gray-bg">
-  <div class="container">
-    <div class="section-header text-center">
-      <h2>Find the Best <span>CarForYou & Enjoy Travelling</span></h2>
-      <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.</p>
-    </div>
-    <div class="row"> 
-    </div>
-  </div>
-    </section>
+<!-- /About-us--> 
 
 
-    <section class="fun-facts-section">
-  <div class="container div_zindex">
-    <div class="row">
-      <div class="col-lg-3 col-xs-6 col-sm-3">
-        <div class="fun-facts-m">
-          <div class="cell">
-            <h2><i class="fa fa-calendar" aria-hidden="true"></i>2+</h2>
-            <p>Years In Business</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-3 col-xs-6 col-sm-3">
-        <div class="fun-facts-m">
-          <div class="cell">
-            <h2><i class="fa fa-car" aria-hidden="true"></i>0+</h2>
-            <p>New Cars For Sale</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-3 col-xs-6 col-sm-3">
-        <div class="fun-facts-m">
-          <div class="cell">
-            <h2><i class="fa fa-car" aria-hidden="true"></i>1+</h2>
-            <p>Used Cars For Sale</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-3 col-xs-6 col-sm-3">
-        <div class="fun-facts-m">
-          <div class="cell">
-            <h2><i class="fa fa-user-circle-o" aria-hidden="true"></i>4+</h2>
-            <p>Satisfied Customers</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-    </section> 
 
  
 

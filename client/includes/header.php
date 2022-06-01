@@ -22,13 +22,13 @@
                         <div class="header_widgets">
                             <div class="circle_icon"> <i class="fa fa-envelope" aria-hidden="true"></i> </div>
                             <p class="uppercase_text">For Support Mail us : </p>
-                            <a href="mailto:<?php echo htmlentities($email);?>"><?php echo htmlentities($email);?></a>
+                            <a href="mailto:<?php echo htmlentities($email);?>">abc@gmail.com</a>
                         </div>
                         <div class="header_widgets">
                             <div class="circle_icon"> <i class="fa fa-phone" aria-hidden="true"></i> </div>
                             <p class="uppercase_text">Service Helpline Call Us: </p>
                             <a
-                                href="tel:<?php echo htmlentities($contactno);?>"><?php echo htmlentities($contactno);?></a>
+                                href="tel:<?php echo htmlentities($contactno);?>">+91123456789</a>
                         </div>
                         <div class="social-follow">
 
@@ -97,7 +97,7 @@ foreach($results as $result)
                 <ul class="nav navbar-nav">
                     <li><a href="index.php">Home</a> </li>
 
-                    <li><a href="page.php?type=aboutus">About Us</a></li>
+                    <li><a href="aboutus.php">About Us</a></li>
                     <li><a href="car-listing.php">Car Listing</a>
                     <li><a href="contact-us.php">Contact Us</a></li>
 

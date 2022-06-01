@@ -13,8 +13,7 @@
             <li><a href="page.php?type=faqs">FAQs</a></li>
             <li><a href="page.php?type=privacy">Privacy</a></li>
           <li><a href="page.php?type=terms">Terms of use</a></li>
-               <li><a href="/../Car_rental_project/admin">Admin Login</a></li>
-          </ul>
+               </ul>
         </div>
   
         <div class="col-md-3 col-sm-6">
